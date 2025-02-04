@@ -6,28 +6,31 @@ const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLinkClick = () => {
-    // Close the menu after a link is clicked
     setIsOpen(false);
   };
 
   return (
-    <nav className="md:hidden bg-black text-white p-4">
-      <div className="flex justify-between items-center">
-        {/* Home/Brand link */}
-        <Link href="/" className="text-xl font-bold" onClick={handleLinkClick}>
-          Sol Dance
-        </Link>
+    <nav className="xl:hidden bg-black text-white p-4 text-center">
+      <div className="flex justify-center items-center gap-4">
+        {/* Menu Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-label="Toggle navigation menu"
-          className="focus:outline-none"
+          className="text-2xl focus:outline-none"
         >
-          ☰ Menu
+          ☰
         </button>
+
+        {/* Brand Name */}
+        <Link href="/" className="text-2xl font-bold" onClick={handleLinkClick}>
+          Sol Dance
+        </Link>
       </div>
+
+      {/* Dropdown Menu */}
       {isOpen && (
-        <div className="flex flex-col gap-2 mt-2">
+        <div className="flex flex-col gap-2 mt-2 items-center">
           <Link href="/lineup" onClick={handleLinkClick}>
             Lineup
           </Link>
@@ -36,6 +39,18 @@ const MobileNav = () => {
           </Link>
           <Link href="/about" onClick={handleLinkClick}>
             About
+          </Link>
+          <Link href="/connect" onClick={handleLinkClick}>
+            Connect
+          </Link>
+          <Link href="/faq" onClick={handleLinkClick}>
+            FAQ
+          </Link>
+          <Link href="/info" onClick={handleLinkClick}>
+            Info
+          </Link>
+          <Link href="/camping" onClick={handleLinkClick}>
+            Camping
           </Link>
         </div>
       )}
