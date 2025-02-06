@@ -46,9 +46,6 @@ const MobileNav = () => {
           <Link href="/faq" onClick={handleLinkClick}>
             FAQ
           </Link>
-          <Link href="/info" onClick={handleLinkClick}>
-            Info
-          </Link>
           <Link href="/camping" onClick={handleLinkClick}>
             Camping
           </Link>

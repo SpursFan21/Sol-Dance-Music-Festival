@@ -28,9 +28,6 @@ const Navbar = () => {
         <Link href="/faq" className={getLinkClasses("/faq")}>
           FAQ
         </Link>
-        <Link href="/info" className={getLinkClasses("/info")}>
-          Info
-        </Link>
         <Link href="/camping" className={getLinkClasses("/camping")}>
           Camping
         </Link>
