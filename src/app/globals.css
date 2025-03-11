@@ -1,21 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #40E0D0; /* Keep the bright turquoise */
+  --secondary: #FFD700; /* Gold */
+  --background-dark: #008080; /* Darker turquoise for background */
+  --foreground: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Global font and textured background with refined gold veins */
 body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-dark); /* Deep turquoise */
+  background-image:
+    repeating-linear-gradient(
+      170deg,
+      transparent 0%,
+      transparent 90%,
+      rgba(255, 215, 0, 0.3) 91%, /* Thin gold */
+      transparent 92%
+    ),
+    repeating-linear-gradient(
+      10deg,
+      transparent 0%,
+      transparent 94%,
+      rgba(255, 215, 0, 0.2) 95%, /* Even fainter gold */
+      transparent 96%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 98%,
+      rgba(255, 215, 0, 0.1) 99%, /* Faint shimmer effect */
+      transparent 100%
+    );
+  background-size: 300px 300px; /* Smaller size for more visible lines */
+  background-blend-mode: soft-light;
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Reusable container class */
+.page-container {
+  @apply min-h-screen flex flex-col items-center justify-start pt-24 p-8;
 }
