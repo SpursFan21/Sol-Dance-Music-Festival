@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -40,9 +41,22 @@ export default function Home() {
   return (
     <div className="home-page">
       <div className="page-container bg-black bg-opacity-60 p-8 rounded-lg">
-        <h1 className="text-5xl font-bold mb-8 text-white">Sol Dance Festival</h1>
+        {/* Replace h1 with logo image */}
+        <div className="mb-8 flex justify-center">
+          <Image
+            src="/logotemp.png"
+            alt="Sol Dance Logo"
+            width={600} // Adjust width as needed
+            height={100} // Adjust height as needed
+            priority
+            className="drop-shadow-lg"
+          />
+        </div>
         <div className="text-center">
-          <p className="text-2xl mb-4 text-white">Countdown to June 20th</p>
+          <h1 className="text-4xl mb-4 text-white">June 20-22, 2025</h1>
+          <h1 className="text-4xl mb-4 text-white">San Luis Valley, Southern Colorado</h1>
+          {/* Spacer */}
+        <div className="my-8"></div> {/* Adjust 'my-8' for desired space */}
           {mounted ? (
             <div className="flex gap-8 justify-center text-4xl font-bold text-white">
               <div>
@@ -83,6 +97,26 @@ export default function Home() {
             </div>
           )}
         </div>
+
+        {/* Spacer */}
+        <div className="my-8"></div> {/* Adjust 'my-8' for desired space */}
+
+        <h1 className="text-3xl mb-4 text-white">TICKETS ON SALE NOW!</h1>
+
+        {/* Spacer */}
+        <div className="my-4"></div> {/* Adjust 'my-8' for desired space */}
+
+        {/* Button that looks like a ticket */}
+        <a
+          href="https://theticketing.co/e/soldancemusicandartsfestival"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="bg-gradient-to-r from-yellow-500 to-blue-500 text-white py-10 px-14 text-8xl font-bold rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+            GET TICKETS
+          </button>
+        </a>
+      
       </div>
     </div>
   );
