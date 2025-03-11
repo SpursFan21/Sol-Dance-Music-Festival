@@ -46,3 +46,10 @@ body {
 .page-container {
   @apply min-h-screen flex flex-col items-center justify-start pt-24 p-8;
 }
+
+/* Home Page Background */
+.home-page {
+  background: url('/banner.png') no-repeat center center fixed;
+  background-size: cover;
+}
+

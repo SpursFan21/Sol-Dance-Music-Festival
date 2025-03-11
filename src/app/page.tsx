@@ -38,12 +38,9 @@ export default function Home() {
   }, [mounted, targetDate]);
 
   return (
-    <div className="page-container">
-      {/* Overlay container for better readability */}
-      <div className="bg-black bg-opacity-60 p-8 rounded-lg">
-        <h1 className="text-5xl font-bold mb-8 text-white">
-          Sol Dance Festival
-        </h1>
+    <div className="home-page">
+      <div className="page-container bg-black bg-opacity-60 p-8 rounded-lg">
+        <h1 className="text-5xl font-bold mb-8 text-white">Sol Dance Festival</h1>
         <div className="text-center">
           <p className="text-2xl mb-4 text-white">Countdown to June 20th</p>
           {mounted ? (
