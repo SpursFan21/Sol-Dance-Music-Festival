@@ -1,4 +1,3 @@
-// Next/sol-dance/src/components/MobileNav.tsx
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -42,13 +41,18 @@ const MobileNav = () => {
           >
             Lineup
           </Link>
-          <Link
-            href="/tickets"
-            onClick={handleLinkClick}
+
+          {/* Updated Tickets Link to external URL */}
+          <a
+            href="https://theticketing.co/e/soldancemusicandartsfestival"
+            target="_blank"
+            rel="noopener noreferrer"
             className="transition-colors hover:text-secondary"
+            onClick={handleLinkClick}
           >
             Tickets
-          </Link>
+          </a>
+
           <Link
             href="/about"
             onClick={handleLinkClick}

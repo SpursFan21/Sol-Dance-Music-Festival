@@ -1,4 +1,3 @@
-// Next/sol-dance/src/components/Navbar.tsx
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -28,9 +27,17 @@ const Navbar = () => {
       <Link href="/lineup" className={getLinkClasses("/lineup")}>
         Lineup
       </Link>
-      <Link href="/tickets" className={getLinkClasses("/tickets")}>
+
+      {/* Updated Tickets Link to external URL */}
+      <a
+        href="https://theticketing.co/e/soldancemusicandartsfestival"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={getLinkClasses("/tickets")}
+      >
         Tickets
-      </Link>
+      </a>
+
       <Link href="/about" className={getLinkClasses("/about")}>
         About
       </Link>

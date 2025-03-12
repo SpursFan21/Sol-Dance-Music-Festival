@@ -19,7 +19,15 @@ export default function Footer() {
         <nav className="text-sm space-x-4">
           <Link href="/" className="hover:underline">Home</Link>
           <Link href="/lineup" className="hover:underline">Lineup</Link>
-          <Link href="/tickets" className="hover:underline">Tickets</Link>
+          {/* Updated Tickets Link to external URL */}
+          <a
+            href="https://theticketing.co/e/soldancemusicandartsfestival"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Tickets
+          </a>
           <Link href="/about" className="hover:underline">About</Link>
           <Link href="/connect" className="hover:underline">Connect</Link>
           <Link href="/faq" className="hover:underline">FAQ</Link>
