@@ -204,7 +204,6 @@ export default function Home() {
 
             {/* Photo Gallery */}
             <div className="mt-16">
-              <h2 className="text-3xl text-white mb-4 text-center">Photo Gallery</h2>
               <div className="relative">
                 <div className="flex overflow-x-auto gap-4 py-4">
                   {galleryImages.slice(visibleImages, visibleImages + 3).map((src, index) => (
