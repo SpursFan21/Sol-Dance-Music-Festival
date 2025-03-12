@@ -14,6 +14,28 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  // Photo gallery data
+  const galleryImages = [
+    "/g1.jpg",
+    "/g2.jpg",
+    "/g3.jpg",
+    "/g4.jpg",
+    "/g5.jpg",
+    "/g6.jpg",
+  ];
+
+  // State to control the index of visible images
+  const [visibleImages, setVisibleImages] = useState(0);
+
+  // Function to handle the slide
+  const nextSlide = () => {
+    setVisibleImages((prev) => (prev + 3) % galleryImages.length);
+  };
+
+  const prevSlide = () => {
+    setVisibleImages((prev) => (prev - 3 + galleryImages.length) % galleryImages.length);
+  };
+
   const targetDate = new Date("June 20, 2025 00:00:00 GMT-0600");
 
   useEffect(() => {
@@ -179,6 +201,46 @@ export default function Home() {
                 </form>
               )}
             </div>
+
+            {/* Photo Gallery */}
+            <div className="mt-16">
+              <h2 className="text-3xl text-white mb-4 text-center">Photo Gallery</h2>
+              <div className="relative">
+                <div className="flex overflow-x-auto gap-4 py-4">
+                  {galleryImages.slice(visibleImages, visibleImages + 3).map((src, index) => (
+                    <div
+                      key={index}
+                      className="flex-none w-[300px] h-[200px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                      <Image
+                        src={src}
+                        alt={`Gallery Image ${index + 1}`}
+                        layout="responsive"
+                        width={300}
+                        height={200}
+                        objectFit="cover"
+                        className="w-full h-full"
+                      />
+                    </div>
+                  ))}
+                </div>
+                {/* Scroll buttons */}
+                <button
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full"
+                  onClick={prevSlide}
+                >
+                  &#8592;
+                </button>
+                <button
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full"
+                  onClick={nextSlide}
+                >
+                  &#8594;
+                </button>
+              </div>
+            </div>
+            {/* Spacer */}
+            <div className="my-8"></div>
           </div>
         </div>
       </div>
