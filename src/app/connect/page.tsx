@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export default function ConnectPage() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       {/* Top Half with Background Image */}
       <div
         className="relative bg-center h-[600px]"
@@ -16,10 +16,8 @@ export default function ConnectPage() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Overlay for readability */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative mx-auto p-8 rounded-b-lg flex flex-col items-center">
-          {/* Logo Image as link to Home */}
           <Link href="/" className="mb-8 flex justify-center">
             <Image
               src="/logotemp.png"
@@ -46,7 +44,7 @@ export default function ConnectPage() {
       </div>
 
       {/* Bottom Half: Connect Info */}
-      <div className="mx-auto p-8 text-center max-w-3xl">
+      <div className="flex-grow mx-auto p-8 text-center max-w-3xl">
         <h2 className="text-4xl font-bold mb-4">REACH OUT TO US</h2>
         <div className="text-lg mb-4 space-y-2">
           <p>
@@ -113,3 +111,4 @@ export default function ConnectPage() {
     </div>
   );
 }
+

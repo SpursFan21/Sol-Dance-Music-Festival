@@ -1,15 +1,16 @@
 "use client";
 import { useState, useEffect, FormEvent } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    days: "--",
+    hours: "--",
+    minutes: "--",
+    seconds: "--",
   });
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -27,11 +28,10 @@ export default function Home() {
   // State to control the index of visible images
   const [visibleImages, setVisibleImages] = useState(0);
 
-  // Function to handle the slide
+  // Functions to handle slide navigation
   const nextSlide = () => {
     setVisibleImages((prev) => (prev + 3) % galleryImages.length);
   };
-
   const prevSlide = () => {
     setVisibleImages((prev) => (prev - 3 + galleryImages.length) % galleryImages.length);
   };
@@ -50,12 +50,12 @@ export default function Home() {
 
       if (difference <= 0) {
         clearInterval(interval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        setTimeLeft({ days: "00", hours: "00", minutes: "00", seconds: "00" });
       } else {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((difference / (1000 * 60)) % 60);
-        const seconds = Math.floor((difference / 1000) % 60);
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24)).toString();
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24).toString();
+        const minutes = Math.floor((difference / (1000 * 60)) % 60).toString();
+        const seconds = Math.floor((difference / 1000) % 60).toString();
         setTimeLeft({ days, hours, minutes, seconds });
       }
     }, 1000);
@@ -89,24 +89,8 @@ export default function Home() {
         <div className="w-full bg-black bg-opacity-60">
           {/* Centered Content Container */}
           <div className="page-container mx-auto p-8 rounded-lg">
-            {/* Logo Image */}
-            <div className="mb-8 flex justify-center">
-              <Image
-                src="/logotemp.png"
-                alt="Sol Dance Logo"
-                width={600}
-                height={100}
-                priority
-                className="drop-shadow-lg"
-              />
-            </div>
-            <div className="text-center">
-              <h1 className="text-4xl mb-4 text-white">June 20-22, 2025</h1>
-              <h1 className="text-4xl mb-4 text-white">
-                San Luis Valley, Southern Colorado
-              </h1>
-              {/* Spacer */}
-              <div className="my-8"></div>
+            {/* Countdown Timer */}
+            <div className="text-center" suppressHydrationWarning>
               {mounted ? (
                 <div className="flex gap-8 justify-center text-4xl font-bold text-white">
                   <div>
@@ -146,6 +130,31 @@ export default function Home() {
                   </div>
                 </div>
               )}
+            </div>
+
+            {/* Spacer */}
+            <div className="my-8"></div>
+
+            {/* Logo Image */}
+            <div className="mb-8 flex justify-center">
+              <Link href="/" onClick={() => {}}>
+                <Image
+                  src="/logotemp.png"
+                  alt="Sol Dance Logo"
+                  width={600}
+                  height={100}
+                  priority
+                  className="drop-shadow-lg"
+                />
+              </Link>
+            </div>
+
+            {/* Event Info */}
+            <div className="text-center">
+              <h1 className="text-4xl mb-4 text-white">June 20-22, 2025</h1>
+              <h1 className="text-4xl mb-4 text-white">
+                San Luis Valley, Southern Colorado
+              </h1>
             </div>
 
             {/* Spacer */}
@@ -237,9 +246,9 @@ export default function Home() {
                   &#8594;
                 </button>
               </div>
+              {/* Spacer */}
+              <div className="my-16"></div>
             </div>
-            {/* Spacer */}
-            <div className="my-8"></div>
           </div>
         </div>
       </div>

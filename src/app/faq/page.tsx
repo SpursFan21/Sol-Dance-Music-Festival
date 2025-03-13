@@ -1,6 +1,7 @@
 // src/app/faq/page.tsx
 "use client";
 import { useState } from "react";
+import Footer from "@/components/Footer";
 
 export default function FAQPage() {
   // FAQ data
@@ -53,66 +54,73 @@ If you have any issues finding the location, please contact us with your name an
   };
 
   return (
-    <div className="p-8 max-w-4xl mx-auto space-y-12">
-      <h1 className="text-4xl font-bold text-center mb-8">
-        FAQ’s and Information about SolDance
-      </h1>
-
-      {/* FAQ Accordion */}
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div key={index} className="border-b border-gray-300 pb-4">
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center text-left focus:outline-none"
-            >
-              <span className="text-2xl font-semibold">{faq.question}</span>
-              <span className="text-3xl font-bold">
-                {openFAQs[index] ? "-" : "+"}
-              </span>
-            </button>
-            {openFAQs[index] && (
-              <div className="mt-2 text-lg text-gray-200">
-                {faq.answer.split("\n").map((line, idx) => (
-                  <p key={idx}>{line.trim()}</p>
-                ))}
+    <>
+      <div className="flex flex-col min-h-screen">
+        <div className="p-8 max-w-4xl mx-auto space-y-12 flex-grow">
+          <h1 className="text-4xl font-bold text-center mb-8">
+            FAQ’s and Information about SolDance
+          </h1>
+  
+          {/* FAQ Accordion */}
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border-b border-gray-300 pb-4">
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex justify-between items-center text-left focus:outline-none"
+                >
+                  <span className="text-2xl font-semibold">{faq.question}</span>
+                  <span className="text-3xl font-bold">
+                    {openFAQs[index] ? "-" : "+"}
+                  </span>
+                </button>
+                {openFAQs[index] && (
+                  <div className="mt-2 text-lg text-gray-200">
+                    {faq.answer.split("\n").map((line, idx) => (
+                      <p key={idx}>{line.trim()}</p>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
+            ))}
           </div>
-        ))}
-      </div>
-
-      {/* About the Organizers Section */}
-      <div className="mt-12">
-        <h2 className="text-4xl font-bold text-center mb-6">
-          About the Organizers
-        </h2>
-        <div className="space-y-8">
-          <div>
-            <h3 className="text-3xl font-semibold mb-2">Dystopia Radio</h3>
-            <p className="text-lg text-gray-200">
-              Every day, we drift further into a dystopian reality, losing sight
-              of the utopia we were meant to create. Dystopia Radio offers a
-              connection through transformative frequencies, uniting a collective
-              of performing artists and visionaries. Their mission is to help break
-              free from society’s mold, inspiring a shift toward a brighter, more
-              hopeful future. Here, heroes come together to change the atmosphere and
-              spark a new energy for the world.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-3xl font-semibold mb-2">Dead Hound Studios</h3>
-            <p className="text-lg text-gray-200">
-              Dead Hound Studios takes pride in the quality and professionalism of
-              our events. They believe that excellence, positivity, and being your
-              true self should be the cornerstone of every gathering. At the heart
-              of their approach is a commitment to creating an environment that is
-              both professional and inclusive—one that lets you escape the
-              repetitiveness of everyday reality.
-            </p>
+  
+          {/* About the Organizers Section */}
+          <div className="mt-12">
+            <h2 className="text-4xl font-bold text-center mb-6">
+              About the Organizers
+            </h2>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-3xl font-semibold mb-2">Dystopia Radio</h3>
+                <p className="text-lg text-gray-200">
+                  Every day, we drift further into a dystopian reality, losing sight
+                  of the utopia we were meant to create. Dystopia Radio offers a
+                  connection through transformative frequencies, uniting a collective
+                  of performing artists and visionaries. Their mission is to help break
+                  free from society’s mold, inspiring a shift toward a brighter, more
+                  hopeful future. Here, heroes come together to change the atmosphere and
+                  spark a new energy for the world.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold mb-2">Dead Hound Studios</h3>
+                <p className="text-lg text-gray-200">
+                  Dead Hound Studios takes pride in the quality and professionalism of
+                  our events. They believe that excellence, positivity, and being your
+                  true self should be the cornerstone of every gathering. At the heart
+                  of their approach is a commitment to creating an environment that is
+                  both professional and inclusive—one that lets you escape the
+                  repetitiveness of everyday reality.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+  
+        {/* Footer remains at the bottom */}
+        <Footer />
       </div>
-    </div>
-  );
+    </>
+  );  
 }
