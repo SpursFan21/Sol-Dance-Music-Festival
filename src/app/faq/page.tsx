@@ -7,49 +7,43 @@ export default function FAQPage() {
   const faqs = [
     {
       question: "What are we improving and changing for 2025?",
-      answer: `2024 had a very rocky start, with delays in sound systems, troubles setting up, cars getting stuck, and the land turning into a literal mud field. Despite all of this, we still felt that it was the community and the wonderful people who came to help us that made it an unforgettable event.
+      answer: `2024 had a rocky start with delays in sound systems, setup issues, vehicles getting stuck, and the land turning into a mud field. Despite these challenges, the community and the wonderful people who came together made it an unforgettable event.
 
-2024 was our first festival year, and we had a lot to learn. We deeply appreciate everyone for their patience and understanding during this first year event.
+2024 was our inaugural festival year, and we had much to learn. We deeply appreciate everyone for their patience and understanding.
 
-We will be improving security, overall layout, vendor village, the flow of ticketing and waivers, sound systems/stages, schedules and timing, workshops, and much much more.
+In 2025, we will be improving security, overall layout, the vendor village, the ticketing and waiver process, sound systems/stages, schedules, workshops, and much more.
 
-We’re looking forward to the creation of 2025, and we can’t wait to show everyone the improvements we made and the plans that we have for next year.`
+We’re looking forward to 2025 and can’t wait to show you the improvements and exciting plans for next year.`
     },
     {
       question: "What happened to the old name and website, Psychedelic Sundance?",
-      answer: `At the festival’s originality, we had a member who was part of the festival and wanted to specifically honor the Sundance tradition in a modern way.
+      answer: `Originally, a member of the festival wanted to honor the Sundance tradition in a modern way. Due to differences, we couldn’t continue with that project. With multiple concerns raised by surrounding communities and online groups, we decided to change the name as soon as possible. 
 
-Due to a disconnect, we could no longer move forward with them on this project. We wanted to change the name immediately, as we had received multiple concerns from surrounding cities and online groups. However, with the festival only weeks away, we couldn’t change the links and marketing materials as quickly as we desired.
+We felt that none of the organizers had the sufficient heritage, credibility, or knowledge to continue with the name Psychedelic Sundance—thus, the change to Sol Dance. We apologize if our previous name conveyed any unintended cultural appropriation. We encourage attendees to research resources on the Sundance Tradition and educational materials about the San Luis Valley. 
 
-All organizers involved at the moment do not have sufficient Native American heritage, credibility, or knowledge to justify continuing with the name Psychedelic Sundance—hence the change to Sol Dance. We also apologize if anyone received a negative connotation of cultural appropriation from our previous branding. This was never our intent. We encourage attendees to research resources based on the Sundance Tradition and related educational materials about the San Luis Valley. We aim to ensure that our actions lead to beautiful blessings, a deep connection with the land and nature, and frequency alignment with the music.
-
-Sol Dance is derived from the words soul, sun, solstice, and dancing. We are comfortable moving forward with this name, and we hope you love it too!`
+Sol Dance is derived from soul, sun, solstice, and dancing. We are confident in our new direction and hope you embrace it with us.`
     },
     {
       question: "Opening and Closing Ceremonies - Blessing the Land: Why San Luis Valley?",
-      answer: `Acknowledgment: The land we host SolDance on is sacred.
+      answer: `The land where SolDance is held is sacred. We honor all cultures and communities, especially in the San Luis Valley, which has been recognized by more than five tribes as “The Valley of No Fighting.”
 
-We want to ensure all cultures and communities are respected, especially in the San Luis Valley, where more than five different tribes have gathered and deemed the land as “The Valley of No Fighting.”
+Our opening and closing ceremonies are designed to reflect this spiritual connection. The valley offers expansive 100-mile views, sand dunes, and soaring peaks, all rich in history and folklore from Native American, Hispanic, and European settlers.
 
-Please read more about our closing and opening ceremonies. The valley offers a spiritual, intriguing landscape with epic 100-mile views, sand dunes, and soaring peaks. It is peppered with the legacy of Native American, Hispanic, and European settlers and explorers, steeped in history and ripe with folklore.
-
-People come to the valley to meditate, as they find peace in the open landscape—a welcome break from dense, business-oriented cities. The emptiness of the valley favors a deeper connection with nature.
-
-Below is an actual view of Blanca Peak from the land; we believe this incredible mountain, along with its sunrises, is something that must be experienced in person.`
+Many come here to meditate and reconnect with nature—a break from the busy urban environment. We believe that experiencing the natural beauty of Blanca Peak and the breathtaking sunrises is something that must be witnessed in person.`
     },
     {
       question: "How do I get to the Event?",
-      answer: `Once you purchase a ticket, you will receive a QR code and direct coordinates for Google Maps to the location.
+      answer: `Once you purchase a ticket, you will receive a QR code and precise coordinates for Google Maps to guide you to the location.
 
-The closest towns are Blanca and Alamosa, about a 30-minute drive away if you need additional supplies.
+The closest towns are Blanca and Alamosa, about a 30-minute drive away for any additional needs.
 
-The land is relatively flat once you arrive; however, in case of surprise weather, we recommend a 4-wheel drive vehicle, as this is a drive through mountainous terrain into the valley. We also advise using vehicles with decent shocks and tires, as the road can be bumpy. Generally, all vehicles can access the site without issue.
+While the land is relatively flat upon arrival, we recommend a 4-wheel drive vehicle (with decent shocks and tires) in case of unexpected weather or bumpy roads.
 
-If you have trouble finding or getting to the location, please email or call us using the number on your ticket confirmation and provide your name and receipt for directions.`
+If you have any issues finding the location, please contact us with your name and receipt details for further directions.`
     }
   ];
 
-  // State: an array of booleans for whether each FAQ is open (default all closed)
+  // State to track which FAQ is open (default all closed)
   const [openFAQs, setOpenFAQs] = useState<boolean[]>(faqs.map(() => false));
 
   const toggleFAQ = (index: number) => {
@@ -59,10 +53,12 @@ If you have trouble finding or getting to the location, please email or call us 
   };
 
   return (
-    <div className="p-8 max-w-4xl mx-auto">
+    <div className="p-8 max-w-4xl mx-auto space-y-12">
       <h1 className="text-4xl font-bold text-center mb-8">
         FAQ’s and Information about SolDance
       </h1>
+
+      {/* FAQ Accordion */}
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div key={index} className="border-b border-gray-300 pb-4">
@@ -84,6 +80,38 @@ If you have trouble finding or getting to the location, please email or call us 
             )}
           </div>
         ))}
+      </div>
+
+      {/* About the Organizers Section */}
+      <div className="mt-12">
+        <h2 className="text-4xl font-bold text-center mb-6">
+          About the Organizers
+        </h2>
+        <div className="space-y-8">
+          <div>
+            <h3 className="text-3xl font-semibold mb-2">Dystopia Radio</h3>
+            <p className="text-lg text-gray-200">
+              Every day, we drift further into a dystopian reality, losing sight
+              of the utopia we were meant to create. Dystopia Radio offers a
+              connection through transformative frequencies, uniting a collective
+              of performing artists and visionaries. Their mission is to help break
+              free from society’s mold, inspiring a shift toward a brighter, more
+              hopeful future. Here, heroes come together to change the atmosphere and
+              spark a new energy for the world.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-3xl font-semibold mb-2">Dead Hound Studios</h3>
+            <p className="text-lg text-gray-200">
+              Dead Hound Studios takes pride in the quality and professionalism of
+              our events. They believe that excellence, positivity, and being your
+              true self should be the cornerstone of every gathering. At the heart
+              of their approach is a commitment to creating an environment that is
+              both professional and inclusive—one that lets you escape the
+              repetitiveness of everyday reality.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
