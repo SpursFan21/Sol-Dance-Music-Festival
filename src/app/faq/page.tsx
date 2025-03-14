@@ -57,6 +57,8 @@ If you have any issues finding the location, please contact us with your name an
     <>
       <div className="flex flex-col min-h-screen">
         <div className="p-8 max-w-4xl mx-auto space-y-12 flex-grow">
+          {/* Spacer to add some breathing room */}
+          <div className="h-16"></div>
           <h1 className="text-4xl font-bold text-center mb-8">
             FAQ’s and Information about SolDance
           </h1>
