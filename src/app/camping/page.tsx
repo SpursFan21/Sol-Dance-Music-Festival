@@ -5,13 +5,13 @@ import Footer from "@/components/Footer";
 
 export default function CampingPage() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       {/* Top Half with Background Image */}
       <div
-        className="relative bg-center h-[600px]"
+        className="relative bg-center h-[600px] w-full"
         style={{
           backgroundImage: "url('/banner2.png')",
-          backgroundSize: "contain",
+          backgroundSize: "cover", // Changed from "contain" to "cover"
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -96,9 +96,8 @@ export default function CampingPage() {
         </ul>
       </div>
 
-      {/* Spacer */}
+      {/* Optional Spacer */}
       <div className="my-20"></div>
-
 
       {/* Footer */}
       <Footer />

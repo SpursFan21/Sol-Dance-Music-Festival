@@ -9,15 +9,17 @@ export default function ConnectPage() {
     <div className="min-h-screen flex flex-col">
       {/* Top Half with Background Image */}
       <div
-        className="relative bg-center h-[600px]"
+        className="relative bg-center h-[600px] w-full"
         style={{
           backgroundImage: "url('/banner2.png')",
-          backgroundSize: "contain",
+          backgroundSize: "cover", // Changed from contain to cover
           backgroundRepeat: "no-repeat",
         }}
       >
+        {/* Overlay for readability */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative mx-auto p-8 rounded-b-lg flex flex-col items-center">
+          {/* Logo Image as link to Home */}
           <Link href="/" className="mb-8 flex justify-center">
             <Image
               src="/logotemp.png"
@@ -25,12 +27,12 @@ export default function ConnectPage() {
               width={600}
               height={100}
               priority
-              className="drop-shadow-lg"
+              className="drop-shadow-lg max-w-full w-auto h-auto"
             />
           </Link>
           <div className="text-center">
-            <h1 className="text-4xl mb-4 text-white">June 20-22, 2025</h1>
-            <h1 className="text-4xl mb-4 text-white">
+            <h1 className="text-3xl md:text-4xl mb-4 text-white">June 20-22, 2025</h1>
+            <h1 className="text-3xl md:text-4xl mb-4 text-white">
               San Luis Valley, Southern Colorado
             </h1>
           </div>
@@ -45,8 +47,8 @@ export default function ConnectPage() {
 
       {/* Bottom Half: Connect Info */}
       <div className="flex-grow mx-auto p-8 text-center max-w-3xl">
-        <h2 className="text-4xl font-bold mb-4">REACH OUT TO US</h2>
-        <div className="text-lg mb-4 space-y-2">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">REACH OUT TO US</h2>
+        <div className="text-lg md:text-xl mb-4 space-y-2">
           <p>
             <strong>General Inquiries:</strong>{" "}
             <a
@@ -85,8 +87,8 @@ export default function ConnectPage() {
           </p>
         </div>
 
-        <h2 className="text-3xl font-bold mb-2">Connect With Us</h2>
-        <div className="flex justify-center space-x-4 text-2xl mb-4">
+        <h2 className="text-xl md:text-2xl font-bold mb-2">Connect With Us</h2>
+        <div className="flex justify-center space-x-4 text-xl md:text-2xl mb-4">
           <a
             href="https://facebook.com/soldancefestival"
             target="_blank"
@@ -111,4 +113,3 @@ export default function ConnectPage() {
     </div>
   );
 }
-
