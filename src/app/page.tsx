@@ -4,6 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
+// Custom hook to get the window width
+function useWindowWidth() {
+  const [width, setWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return width;
+}
+
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
@@ -23,17 +36,30 @@ export default function Home() {
     "/g4.jpg",
     "/g5.jpg",
     "/g6.jpg",
+    "/g7.jpg",
+    "/g8.jpg",
+    "/g9.jpg",
+    "/g10.jpg",
+    "/g11.jpg",
+    "/g12.jpg",
   ];
 
-  // State to control the index of visible images
+  // Use custom hook to get the current window width
+  const windowWidth = useWindowWidth();
+  // Determine how many images to show based on window width:
+  const imagesPerView = windowWidth < 768 ? 1 : 3;
+
+  // State to control the index of the first visible image
   const [visibleImages, setVisibleImages] = useState(0);
 
-  // Functions to handle slide navigation
+  // Functions to handle slide navigation using imagesPerView
   const nextSlide = () => {
-    setVisibleImages((prev) => (prev + 3) % galleryImages.length);
+    setVisibleImages((prev) => (prev + imagesPerView) % galleryImages.length);
   };
   const prevSlide = () => {
-    setVisibleImages((prev) => (prev - 3 + galleryImages.length) % galleryImages.length);
+    setVisibleImages(
+      (prev) => (prev - imagesPerView + galleryImages.length) % galleryImages.length
+    );
   };
 
   const targetDate = new Date("June 20, 2025 00:00:00 GMT-0600");
@@ -215,22 +241,24 @@ export default function Home() {
             <div className="mt-16">
               <div className="relative">
                 <div className="flex overflow-x-auto gap-4 py-4">
-                  {galleryImages.slice(visibleImages, visibleImages + 3).map((src, index) => (
-                    <div
-                      key={index}
-                      className="flex-none w-[300px] h-[200px] rounded-lg overflow-hidden shadow-lg"
-                    >
-                      <Image
-                        src={src}
-                        alt={`Gallery Image ${index + 1}`}
-                        layout="responsive"
-                        width={300}
-                        height={200}
-                        objectFit="cover"
-                        className="w-full h-full"
-                      />
-                    </div>
-                  ))}
+                  {galleryImages
+                    .slice(visibleImages, visibleImages + imagesPerView)
+                    .map((src, index) => (
+                      <div
+                        key={index}
+                        className="flex-none w-[300px] h-[200px] rounded-lg overflow-hidden shadow-lg"
+                      >
+                        <Image
+                          src={src}
+                          alt={`Gallery Image ${index + 1}`}
+                          layout="responsive"
+                          width={300}
+                          height={200}
+                          objectFit="cover"
+                          className="w-full h-full"
+                        />
+                      </div>
+                    ))}
                 </div>
                 {/* Scroll buttons */}
                 <button
