@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,25 +11,35 @@ const MobileNav = () => {
   };
 
   return (
-    <nav className="xl:hidden bg-gradient-to-b from-[#339a94] to-[#4ceee0] backdrop-blur-sm text-white p-4 shadow-md fixed top-0 left-0 right-0 z-50">
-      <div className="flex justify-between items-center">
-        {/* Menu Toggle Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation menu"
-          className="text-3xl focus:outline-none transition-transform duration-200 transform hover:scale-110"
-        >
-          ☰
-        </button>
-
-        {/* Brand Name - centered using a spacer */}
-        <Link href="/" className="text-3xl font-bold" onClick={handleLinkClick}>
-          Sol Dance
-        </Link>
-
-        {/* Spacer to balance the toggle button */}
-        <div className="w-8" />
+    <nav className="xl:hidden bg-gradient-to-b from-[#339a94] to-[#4ceee0] backdrop-blur-sm text-white py-2 px-4 shadow-md fixed top-0 left-0 right-0 z-50">
+      {/* Top row: toggle button, centered logo, spacer */}
+      <div className="flex items-center">
+        {/* Left Column: Toggle Button */}
+        <div className="w-12 flex justify-start">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-expanded={isOpen}
+            aria-label="Toggle navigation menu"
+            className="text-3xl focus:outline-none transition-transform duration-200 transform hover:scale-110"
+          >
+            ☰
+          </button>
+        </div>
+        {/* Center Column: Logo */}
+        <div className="flex-1 flex justify-center">
+          <Link href="/" onClick={handleLinkClick}>
+            <Image
+              src="/logotemp.png"
+              alt="Sol Dance Logo"
+              width={120}
+              height={50}
+              priority
+              className="drop-shadow-lg"
+            />
+          </Link>
+        </div>
+        {/* Right Column: Spacer */}
+        <div className="w-12" />
       </div>
 
       {/* Dropdown Menu */}
@@ -41,18 +52,15 @@ const MobileNav = () => {
           >
             Lineup
           </Link>
-
-          {/* Updated Tickets Link to external URL */}
           <a
             href="https://theticketing.co/e/soldancemusicandartsfestival"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-secondary"
             onClick={handleLinkClick}
+            className="transition-colors hover:text-secondary"
           >
             Tickets
           </a>
-
           <Link
             href="/about"
             onClick={handleLinkClick}

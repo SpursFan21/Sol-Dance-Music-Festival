@@ -52,10 +52,10 @@ export default function Footer() {
         {/* Right Column */}
         <div className="flex-1 flex justify-end pr-8">
           <div className="flex space-x-2 md:space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61572925377420" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="text-xl md:text-2xl hover:text-blue-400 transition-colors" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/soldancefestivalco/" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-xl md:text-2xl hover:text-pink-400 transition-colors" />
             </a>
           </div>

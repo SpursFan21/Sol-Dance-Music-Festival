@@ -19,17 +19,24 @@ export default function ConnectPage() {
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative mx-auto p-8 rounded-b-lg flex flex-col items-center">
-          {/* Logo Image as link to Home */}
-          <Link href="/" className="mb-8 flex justify-center">
-            <Image
-              src="/logotemp.png"
-              alt="Sol Dance Logo"
-              width={600}
-              height={100}
-              priority
-              className="drop-shadow-lg max-w-full w-auto h-auto"
-            />
-          </Link>
+
+          {/* Spacer */}
+          <div className="my-8 md:my-4"></div>
+
+          {/* Logo Image */}
+          <div className="w-full flex justify-center mb-8">
+            <Link href="/" onClick={() => {}}>
+              <Image
+                src="/logotemp.png"
+                alt="Sol Dance Logo"
+                width={600}
+                height={100}
+                priority
+                className="drop-shadow-lg"
+              />
+            </Link>
+          </div>
+
           <div className="text-center">
             <h1 className="text-3xl md:text-4xl mb-4 text-white">June 20-22, 2025</h1>
             <h1 className="text-3xl md:text-4xl mb-4 text-white">
@@ -90,7 +97,7 @@ export default function ConnectPage() {
         <h2 className="text-xl md:text-2xl font-bold mb-2">Connect With Us</h2>
         <div className="flex justify-center space-x-4 text-xl md:text-2xl mb-4">
           <a
-            href="https://facebook.com/soldancefestival"
+            href="https://www.facebook.com/profile.php?id=61572925377420"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-400"
@@ -98,7 +105,7 @@ export default function ConnectPage() {
             <FaFacebook />
           </a>
           <a
-            href="https://instagram.com/soldancefestival"
+            href="https://www.instagram.com/soldancefestivalco/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-400"

@@ -18,6 +18,10 @@ export default function CampingPage() {
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative mx-auto p-8 rounded-b-lg flex flex-col items-center">
+          
+          {/*spacer*/}
+          <div className="my-8 md:my-4"></div>
+
           {/* Logo Image as link to Home */}
           <Link href="/" className="mb-8 flex justify-center">
             <Image
@@ -96,7 +100,7 @@ export default function CampingPage() {
         </ul>
       </div>
 
-      {/* Optional Spacer */}
+      {/* Spacer */}
       <div className="my-20"></div>
 
       {/* Footer */}
