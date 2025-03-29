@@ -1,3 +1,4 @@
+// sol-dance\src\app\page.tsx
 "use client";
 import { useState, useEffect, FormEvent } from "react";
 import Image from "next/image";
@@ -192,15 +193,26 @@ export default function Home() {
             <div className="my-4"></div>
 
             {/* Button that looks like a ticket */}
-            <a
+            {/* Button that looks like a ticket */}
+            <Link
               href="https://theticketing.co/e/soldancemusicandartsfestival"
               target="_blank"
               rel="noopener noreferrer"
+              className="block"
             >
-              <button className="bg-gradient-to-r from-yellow-500 to-blue-500 text-white py-10 px-14 text-8xl font-bold rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
-                GET TICKETS
-              </button>
-            </a>
+              <div className="w-full max-w-4xl mx-auto p-4">
+                <Image
+                  src="/Ticket-Button-06.png"
+                  alt="Get Tickets"
+                  width={1200}
+                  height={400}
+                  className="w-full h-auto max-h-[500px] md:max-h-[600px] lg:max-h-[700px] hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </Link>
+
+
+
 
             {/* Mailing List Sign-Up */}
             <div className="mt-12 text-center">
