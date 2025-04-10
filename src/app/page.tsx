@@ -116,6 +116,8 @@ export default function Home() {
         <div className="w-full bg-black bg-opacity-60">
           {/* Centered Content Container */}
           <div className="page-container mx-auto p-8 rounded-lg">
+            {/* Spacer */}
+            <div className="my-0"></div>
             {/* Countdown Timer */}
             <div className="text-center" suppressHydrationWarning>
               {mounted ? (
@@ -160,26 +162,26 @@ export default function Home() {
             </div>
 
             {/* Spacer */}
-            <div className="my-8"></div>
+            <div className="my-0"></div>
 
             {/* Logo Image */}
             <div className="mb-8 flex justify-center">
               <Link href="/" onClick={() => {}}>
                 <Image
-                  src="/logotemp.png"
+                  src="/Soldance logo.png"
                   alt="Sol Dance Logo"
-                  width={600}
+                  width={700}
                   height={100}
                   priority
-                  className="drop-shadow-lg"
+                  className="mt-0 -mb-24 drop-shadow-lg"
                 />
               </Link>
             </div>
 
             {/* Event Info */}
             <div className="text-center">
-              <h1 className="text-4xl mb-4 text-white">June 20-22, 2025</h1>
-              <h1 className="text-4xl mb-4 text-white">
+              <h1 className="text-4xl mb-4 font-semibold text-white">June 20-22, 2025</h1>
+              <h1 className="text-4xl mb-4 font-semibold text-white">
                 San Luis Valley, Southern Colorado
               </h1>
             </div>
@@ -187,7 +189,7 @@ export default function Home() {
             {/* Spacer */}
             <div className="my-8"></div>
 
-            <h1 className="text-3xl mb-4 text-white">TICKETS ON SALE NOW!</h1>
+            <h1 className="text-3xl mb-4 font-semibold text-white">TICKETS ON SALE NOW!</h1>
 
             {/* Spacer */}
             <div className="my-4"></div>
@@ -216,10 +218,10 @@ export default function Home() {
 
             {/* Mailing List Sign-Up */}
             <div className="mt-12 text-center">
-              <h2 className="text-2xl text-white mb-2">
+              <h2 className="text-2xl font-semibold text-white mb-2">
                 MORE ANNOUNCEMENTS AND INFO TO COME
               </h2>
-              <p className="text-lg text-white mb-4">
+              <p className="text-lg font-semibold text-white mb-4">
                 JOIN OUR MAILING LIST TO BE THE FIRST TO KNOW
               </p>
               {submitted ? (

@@ -15,14 +15,15 @@ const Navbar = () => {
       {/* Logo Link */}
       <Link href="/" className="flex items-center">
         <Image
-          src="/logotemp.png"
+          src="/Soldance logo.png"
           alt="Sol Dance Logo"
-          width={120} // Adjust width as needed
-          height={50} // Adjust height as needed
+          width={120}
+          height={70}
           priority
-          className="drop-shadow-lg"
+          className="-mt-7 -mb-7 drop-shadow-lg" //negative pulling with mt and mb for sudo crop effect
         />
       </Link>
+
 
       <Link href="/lineup" className={getLinkClasses("/lineup")}>
         Lineup

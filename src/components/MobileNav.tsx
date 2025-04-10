@@ -29,12 +29,12 @@ const MobileNav = () => {
         <div className="flex-1 flex justify-center">
           <Link href="/" onClick={handleLinkClick}>
             <Image
-              src="/logotemp.png"
+              src="/Soldance logo.png"
               alt="Sol Dance Logo"
               width={120}
               height={50}
               priority
-              className="drop-shadow-lg"
+              className="-mt-7 -mb-7 drop-shadow-lg"
             />
           </Link>
         </div>

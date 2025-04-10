@@ -2,6 +2,7 @@
 "use client";
 import { useState } from "react";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function FAQPage() {
   // FAQ data
@@ -88,14 +89,24 @@ If you have any issues finding the location, please contact us with your name an
           </div>
   
           {/* About the Organizers Section */}
+          {/* About the Organizers Section */}
           <div className="mt-12">
             <h2 className="text-4xl font-bold text-center mb-6">
               About the Organizers
             </h2>
-            <div className="space-y-8">
-              <div>
+            <div className="space-y-12">
+              
+              {/* Dystopia Radio */}
+              <div className="text-center">
+                <Image
+                  src="/DYSTOPIA RADIO MKII ICON.png"
+                  alt="Dystopia Radio Logo"
+                  width={200}
+                  height={100}
+                  className="mx-auto mb-4 drop-shadow-md"
+                />
                 <h3 className="text-3xl font-semibold mb-2">Dystopia Radio</h3>
-                <p className="text-lg text-gray-200">
+                <p className="text-lg text-gray-200 max-w-3xl mx-auto">
                   Every day, we drift further into a dystopian reality, losing sight
                   of the utopia we were meant to create. Dystopia Radio offers a
                   connection through transformative frequencies, uniting a collective
@@ -105,9 +116,18 @@ If you have any issues finding the location, please contact us with your name an
                   spark a new energy for the world.
                 </p>
               </div>
-              <div>
+
+              {/* Dead Hound Studios */}
+              <div className="text-center">
+                <Image
+                  src="/Dead Hound Studios.png"
+                  alt="Dead Hound Studios Logo"
+                  width={200}
+                  height={100}
+                  className="mx-auto mb-4 drop-shadow-md"
+                />
                 <h3 className="text-3xl font-semibold mb-2">Dead Hound Studios</h3>
-                <p className="text-lg text-gray-200">
+                <p className="text-lg text-gray-200 max-w-3xl mx-auto">
                   Dead Hound Studios takes pride in the quality and professionalism of
                   our events. They believe that excellence, positivity, and being your
                   true self should be the cornerstone of every gathering. At the heart
@@ -116,8 +136,12 @@ If you have any issues finding the location, please contact us with your name an
                   repetitiveness of everyday reality.
                 </p>
               </div>
+
             </div>
           </div>
+
+
+
         </div>
   
         {/* Footer remains at the bottom */}
