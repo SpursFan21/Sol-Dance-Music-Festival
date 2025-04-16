@@ -1,6 +1,6 @@
 // sol-dance\src\app\page.tsx
 "use client";
-import { useState, useEffect, FormEvent } from "react";
+import { useState, useEffect, FormEvent, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
@@ -63,7 +63,8 @@ export default function Home() {
     );
   };
 
-  const targetDate = new Date("June 20, 2025 00:00:00 GMT-0600");
+  const targetDate = useMemo(() => new Date('2025-06-20T00:00:00'), []);
+
 
   useEffect(() => {
     setMounted(true);

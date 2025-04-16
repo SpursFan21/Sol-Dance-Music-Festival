@@ -30,7 +30,7 @@ export default function CampingPage() {
               width={600}
               height={100}
               priority
-              className="drop-shadow-lg"
+              className="drop-shadow-lg transition-transform duration-300 hover:scale-110"
             />
           </Link>
           <div className="text-center">

@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function LineupPage() {
   return (
@@ -11,12 +12,17 @@ export default function LineupPage() {
 
         {/* Display the festival lineup flyer with padding and controlled width */}
         <div className="mt-8 p-4 flex justify-center">
-          <img
-            src="/soldanceflyer.png"
-            alt="Festival Lineup Flyer"
-            className="w-full max-w-5xl h-auto rounded-lg"
-          />
+            <div className="relative w-full max-w-6xl aspect-[3/4] rounded-lg overflow-hidden">
+            <Image
+              src="/soldanceflyer.png"
+              alt="Festival Lineup Flyer"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
+
 
         {/* Spacer to add some breathing room */}
         <div className="h-16"></div>
