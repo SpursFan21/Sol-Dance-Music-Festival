@@ -1,3 +1,4 @@
+//Next\sol-dance\src\app\layout.tsx
 import Navbar from "@/components/Navbar";
 import MobileNav from "@/components/MobileNav";
 import "./globals.css";
@@ -5,7 +6,7 @@ import "./globals.css";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-[url('/Soldance-texture-01.jpg')] bg-cover bg-center bg-fixed text-white font-sans">
         <Navbar />
         <MobileNav />
         {children}

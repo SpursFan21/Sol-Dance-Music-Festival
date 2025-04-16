@@ -162,21 +162,24 @@ export default function Home() {
             </div>
 
             {/* Spacer */}
-            <div className="my-0"></div>
+            <div className="my-10"></div>
 
             {/* Logo Image */}
             <div className="mb-8 flex justify-center">
               <Link href="/" onClick={() => {}}>
                 <Image
-                  src="/Soldance logo.png"
+                  src="/SoldanceLogo.png"
                   alt="Sol Dance Logo"
                   width={700}
                   height={100}
                   priority
-                  className="mt-0 -mb-24 drop-shadow-lg"
+                  className="mt-0 -mb-24 drop-shadow-lg hover:scale-110 transition-transform duration-300"
                 />
               </Link>
             </div>
+
+            {/* Spacer */}
+            <div className="my-20"></div>
 
             {/* Event Info */}
             <div className="text-center">
@@ -189,12 +192,11 @@ export default function Home() {
             {/* Spacer */}
             <div className="my-8"></div>
 
-            <h1 className="text-3xl mb-4 font-semibold text-white">TICKETS ON SALE NOW!</h1>
+            <h1 className="text-center text-3xl mb-4 font-semibold text-white">TICKETS ON SALE NOW!</h1>
 
             {/* Spacer */}
             <div className="my-4"></div>
 
-            {/* Button that looks like a ticket */}
             {/* Button that looks like a ticket */}
             <Link
               href="https://theticketing.co/e/soldancemusicandartsfestival"
@@ -208,7 +210,7 @@ export default function Home() {
                   alt="Get Tickets"
                   width={1200}
                   height={400}
-                  className="w-full h-auto max-h-[500px] md:max-h-[600px] lg:max-h-[700px] hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto max-h-[500px] md:max-h-[600px] lg:max-h-[700px] hover:scale-110 transition-transform duration-300 hover:animate-pulse "
                 />
               </div>
             </Link>
@@ -243,10 +245,11 @@ export default function Home() {
                   />
                   <button
                     type="submit"
-                    className="bg-gradient-to-r from-yellow-500 to-blue-500 text-white font-bold py-3 px-8 rounded-md shadow-lg hover:scale-105 transition-transform"
+                    className="bg-cyan-800 text-white font-bold py-3 px-8 rounded-md shadow-lg hover:scale-105 hover:shadow-[0_0_20px_#40E0D0] transition-all"
                   >
                     Sign Up
                   </button>
+
                 </form>
               )}
             </div>

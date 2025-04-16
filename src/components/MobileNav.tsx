@@ -1,3 +1,4 @@
+//Next\sol-dance\src\components\MobileNav.tsx
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -29,12 +30,12 @@ const MobileNav = () => {
         <div className="flex-1 flex justify-center">
           <Link href="/" onClick={handleLinkClick}>
             <Image
-              src="/Soldance logo.png"
+              src="/SoldanceLogo.png"
               alt="Sol Dance Logo"
               width={120}
               height={50}
               priority
-              className="-mt-7 -mb-7 drop-shadow-lg"
+              className="-mt-0 -mb-0 drop-shadow-lg"
             />
           </Link>
         </div>
@@ -48,7 +49,7 @@ const MobileNav = () => {
           <Link
             href="/lineup"
             onClick={handleLinkClick}
-            className="transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-5 bg-white/10 rounded-md transition-colors hover:text-secondary"
           >
             Lineup
           </Link>
@@ -57,40 +58,41 @@ const MobileNav = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleLinkClick}
-            className="transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-2 transition-colors hover:text-secondary"
           >
             Tickets
           </a>
           <Link
             href="/about"
             onClick={handleLinkClick}
-            className="transition-colors hover:text-secondary"
+            className="w-full text-center py-5 bg-white/10 rounded-md transition-colors hover:text-secondary"
           >
             About
           </Link>
           <Link
             href="/connect"
             onClick={handleLinkClick}
-            className="transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-2 transition-colors hover:text-secondary"
           >
             Connect
           </Link>
           <Link
             href="/faq"
             onClick={handleLinkClick}
-            className="transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-5 bg-white/10 rounded-md transition-colors hover:text-secondary"
           >
             FAQ
           </Link>
           <Link
             href="/camping"
             onClick={handleLinkClick}
-            className="transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-2 transition-colors hover:text-secondary"
           >
             Camping
           </Link>
         </div>
       )}
+
     </nav>
   );
 };

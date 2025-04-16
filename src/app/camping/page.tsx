@@ -20,12 +20,12 @@ export default function CampingPage() {
         <div className="relative mx-auto p-8 rounded-b-lg flex flex-col items-center">
           
           {/*spacer*/}
-          <div className="my-8 md:my-4"></div>
+          <div className="my-8"></div>
 
           {/* Logo Image as link to Home */}
           <Link href="/" className="mb-8 flex justify-center">
             <Image
-              src="/logotemp.png"
+              src="/SoldanceLogo.png"
               alt="Sol Dance Logo"
               width={600}
               height={100}
@@ -34,8 +34,8 @@ export default function CampingPage() {
             />
           </Link>
           <div className="text-center">
-            <h1 className="text-4xl mb-4 text-white">June 20-22, 2025</h1>
-            <h1 className="text-4xl mb-4 text-white">
+            <h1 className="text-4xl font-semibold mb-4 text-white">June 20-22, 2025</h1>
+            <h1 className="text-4xl font-semibold mb-4 text-white">
               San Luis Valley, Southern Colorado
             </h1>
           </div>

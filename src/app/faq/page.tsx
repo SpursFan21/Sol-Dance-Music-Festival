@@ -99,7 +99,7 @@ If you have any issues finding the location, please contact us with your name an
               {/* Dystopia Radio */}
               <div className="text-center">
                 <Image
-                  src="/DYSTOPIA RADIO MKII ICON.png"
+                  src="/DYSTOPIA-RADIO-ICON.png"
                   alt="Dystopia Radio Logo"
                   width={200}
                   height={100}
@@ -120,7 +120,7 @@ If you have any issues finding the location, please contact us with your name an
               {/* Dead Hound Studios */}
               <div className="text-center">
                 <Image
-                  src="/Dead Hound Studios.png"
+                  src="/Dead-Hound-Studios.png"
                   alt="Dead Hound Studios Logo"
                   width={200}
                   height={100}

@@ -21,25 +21,26 @@ export default function ConnectPage() {
         <div className="relative mx-auto p-8 rounded-b-lg flex flex-col items-center">
 
           {/* Spacer */}
-          <div className="my-8 md:my-4"></div>
+          <div className="my-9"></div>
 
           {/* Logo Image */}
           <div className="w-full flex justify-center mb-8">
             <Link href="/" onClick={() => {}}>
               <Image
-                src="/logotemp.png"
+                src="/SoldanceLogo.png"
                 alt="Sol Dance Logo"
                 width={600}
                 height={100}
                 priority
-                className="drop-shadow-lg"
+                className="drop-shadow-lg transition-transform duration-200 hover:scale-110 hover:shadow-[0_0_25px_#40E0D0]"
               />
             </Link>
           </div>
 
+
           <div className="text-center">
-            <h1 className="text-3xl md:text-4xl mb-4 text-white">June 20-22, 2025</h1>
-            <h1 className="text-3xl md:text-4xl mb-4 text-white">
+            <h1 className="text-3xl font-semibold md:text-4xl mb-4 text-white">June 20-22, 2025</h1>
+            <h1 className="text-3xl font-semibold md:text-4xl mb-4 text-white">
               San Luis Valley, Southern Colorado
             </h1>
           </div>
@@ -95,12 +96,12 @@ export default function ConnectPage() {
         </div>
 
         <h2 className="text-xl md:text-2xl font-bold mb-2">Connect With Us</h2>
-        <div className="flex justify-center space-x-4 text-xl md:text-2xl mb-4">
+        <div className="flex justify-center space-x-6 text-3xl md:text-4xl mb-4">
           <a
             href="https://www.facebook.com/profile.php?id=61572925377420"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400"
+            className="transition-transform duration-200 hover:scale-125 hover:text-cyan-300"
           >
             <FaFacebook />
           </a>
@@ -108,11 +109,12 @@ export default function ConnectPage() {
             href="https://www.instagram.com/soldancefestivalco/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-400"
+            className="transition-transform duration-200 hover:scale-125 hover:text-cyan-300"
           >
             <FaInstagram />
           </a>
         </div>
+
       </div>
 
       {/* Footer */}
