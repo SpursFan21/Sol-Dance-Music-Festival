@@ -6,7 +6,7 @@ import "./globals.css";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-[url('/Soldance-texture-01.jpg')] bg-cover bg-center bg-fixed text-white font-sans">
+      <body className="bg-[url('/bg-texture.jpg')] bg-cover bg-center bg-fixed text-white font-sans">
         <Navbar />
         <MobileNav />
         {children}
