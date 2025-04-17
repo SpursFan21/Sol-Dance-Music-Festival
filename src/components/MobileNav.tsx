@@ -53,40 +53,47 @@ const MobileNav = () => {
           >
             Lineup
           </Link>
+          <Link
+            href="/artists"
+            onClick={handleLinkClick}
+            className="w-full text-center font-semibold py-2 transition-colors hover:text-secondary"
+          >
+            Artists
+          </Link>
           <a
             href="https://theticketing.co/e/soldancemusicandartsfestival"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleLinkClick}
-            className="w-full text-center font-semibold py-2 transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-5 bg-white/10 transition-colors hover:text-secondary"
           >
             Tickets
           </a>
           <Link
             href="/about"
             onClick={handleLinkClick}
-            className="w-full text-center py-5 bg-white/10 rounded-md transition-colors hover:text-secondary"
+            className="w-full text-center py-2 rounded-md transition-colors hover:text-secondary"
           >
             About
           </Link>
           <Link
             href="/connect"
             onClick={handleLinkClick}
-            className="w-full text-center font-semibold py-2 transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-5 bg-white/10 transition-colors hover:text-secondary"
           >
             Connect
           </Link>
           <Link
             href="/faq"
             onClick={handleLinkClick}
-            className="w-full text-center font-semibold py-5 bg-white/10 rounded-md transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-2 rounded-md transition-colors hover:text-secondary"
           >
             FAQ
           </Link>
           <Link
             href="/camping"
             onClick={handleLinkClick}
-            className="w-full text-center font-semibold py-2 transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-5 bg-white/10 transition-colors hover:text-secondary"
           >
             Camping
           </Link>

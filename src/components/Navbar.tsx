@@ -28,6 +28,9 @@ const Navbar = () => {
       <Link href="/lineup" className={getLinkClasses("/lineup")}>
         Lineup
       </Link>
+      <Link href="/artists" className={getLinkClasses("/artists")}>
+        Artists
+      </Link>
 
       {/* Updated Tickets Link to external URL */}
       <a
