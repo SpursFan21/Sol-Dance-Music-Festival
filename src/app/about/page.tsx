@@ -1,3 +1,5 @@
+//src\app\about\page.tsx
+
 "use client";
 import Footer from "@/components/Footer";
 
@@ -15,18 +17,23 @@ export default function AboutPage() {
         <main className="relative p-8 text-center text-white max-w-3xl mx-auto">
           {/* Spacer */}
           <div className="my-40"></div>
-          <h1 className="text-5xl font-bold mb-6">Get ready for a magical, one of a kind experience at SolDance Festival!</h1>
+          <h1 className="text-5xl font-bold mb-6">
+            Get ready for a magical, one of a kind experience at SolDance Festival!
+          </h1>
           <div className="my-10"></div>
           <p className="text-lg mb-6">
-          Let your soul dance under the sun, and celebrate the essence of summertime.
-          SolDance is a festival like no other - where memories are made, and we experience our true selves once again.
+            Let your soul dance under the sun, and celebrate the essence of summertime.
+            SolDance is a festival like no other - where memories are made, and we experience our true selves once again.
           </p>
           {/* Spacer */}
           <div className="my-40"></div>
           <p className="text-lg mb-6">
-          Join us for a weekend filled with pulsating beats, healing, and a celebration of the Summer Solstice.
-          This community driven event is dedicated to immerse you in a world of underground music, interactive art, wellness workshops, and nature's elements. Join our friends Ancient Embers in a special opening ceremony to set intentions and align with community on historical land.
+            Join us for a weekend filled with pulsating beats, healing, and a celebration of the Summer Solstice.
+            This community driven event is dedicated to immerse you in a world of underground music, interactive art,
+            wellness workshops, and nature&apos;s elements. Join our friends Ancient Embers in a special opening ceremony
+            to set intentions and align with community on historical land.
           </p>
+
         </main>
       </div>
 

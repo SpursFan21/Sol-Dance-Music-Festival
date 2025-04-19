@@ -256,7 +256,6 @@ export default function Home() {
             </div>
 
             {/* Photo Gallery */}
-            {/* Photo Gallery */}
             <div className="mt-16">
               <div className="relative">
                 <div className="flex overflow-x-auto gap-4 py-4">

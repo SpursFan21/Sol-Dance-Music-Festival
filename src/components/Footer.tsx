@@ -1,19 +1,28 @@
+//src\components\Footer.tsx
 import Link from "next/link";
+import Image from "next/image";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-2 md:py-3 xl:py-4 w-full">
+    <footer className="bg-black text-white py-0 md:py-0 xl:py-0 w-full">
       <div className="container mx-auto flex items-center px-8">
-        {/* Left Column */}
+
+        {/* Left Column - Updated with SVG Button */}
         <div className="flex-1">
           <a
             href="https://theticketing.co/e/soldancemusicandartsfestival"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold py-1 md:py-2 px-4 md:px-6 rounded-lg shadow-lg hover:scale-105 transition-transform"
+            className="inline-block p-0 leading-none hover:scale-110 transition-transform"
           >
-            PURCHASE TICKETS
+            <Image
+              src="/buttons/TicketButton04.svg"
+              alt="Purchase Tickets"
+              width={200}
+              height={60}
+              className="align-middle"
+            />
           </a>
         </div>
 
@@ -49,13 +58,21 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* Right Column */}
+        {/* Right Column - Social Icons */}
         <div className="flex-1 flex justify-end pr-8">
           <div className="flex space-x-2 md:space-x-4">
-            <a href="https://www.facebook.com/profile.php?id=61572925377420" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/profile.php?id=61572925377420"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebook className="text-xl md:text-2xl hover:text-blue-400 transition-colors" />
             </a>
-            <a href="https://www.instagram.com/soldancefestivalco/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/soldancefestivalco/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram className="text-xl md:text-2xl hover:text-pink-400 transition-colors" />
             </a>
           </div>
