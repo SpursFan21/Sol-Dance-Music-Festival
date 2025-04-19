@@ -16,17 +16,17 @@ export default function AboutPage() {
 
         <main className="relative p-8 text-center text-white max-w-3xl mx-auto">
           {/* Spacer */}
-          <div className="my-40"></div>
+          <div className="my-20 sm:my-40 md:my-40 lg:my-40"></div>
           <h1 className="text-5xl font-bold mb-6">
             Get ready for a magical, one of a kind experience at SolDance Festival!
           </h1>
-          <div className="my-10"></div>
+          <div className="my-24 sm:my-24 md:my-24 lg:my-24"></div>
           <p className="text-lg mb-6">
             Let your soul dance under the sun, and celebrate the essence of summertime.
             SolDance is a festival like no other - where memories are made, and we experience our true selves once again.
           </p>
           {/* Spacer */}
-          <div className="my-40"></div>
+          <div className="my-4 sm:my-28 md:my-28 lg:my-40"></div>
           <p className="text-lg mb-6">
             Join us for a weekend filled with pulsating beats, healing, and a celebration of the Summer Solstice.
             This community driven event is dedicated to immerse you in a world of underground music, interactive art,

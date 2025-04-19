@@ -84,11 +84,11 @@ const MobileNav = () => {
             Connect
           </Link>
           <Link
-            href="/faq"
+            href="/info"
             onClick={handleLinkClick}
             className="w-full text-center font-semibold py-2 rounded-md transition-colors hover:text-secondary"
           >
-            FAQ
+            Info
           </Link>
           <Link
             href="/camping"

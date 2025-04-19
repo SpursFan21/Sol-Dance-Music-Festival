@@ -9,7 +9,7 @@ export default function ConnectPage() {
     <div className="min-h-screen flex flex-col">
       {/* Top Half with Background Image */}
       <div
-        className="relative bg-center h-[600px] w-full"
+        className="relative bg-center h-[72vh] sm:h-[400px] md:h-[600px] w-full"
         style={{
           backgroundImage: "url('/banner2.png')",
           backgroundSize: "cover", // Changed from contain to cover
