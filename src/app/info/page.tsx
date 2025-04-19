@@ -4,7 +4,7 @@ import { useState } from "react";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
-export default function FAQPage() {
+export default function InfoPage() {
   // FAQ data
   const faqs = [
     {
@@ -35,13 +35,11 @@ Many come here to meditate and reconnect with nature—a break from the busy urb
     },
     {
       question: "How do I get to the Event?",
-      answer: `Once you purchase a ticket, you will receive a QR code and precise coordinates for Google Maps to guide you to the location.
+      answer: `▪ Once you purchase a ticket, you will receive direct coordinates of the location closer to the event date. 
 
-The closest towns are Blanca and Alamosa, about a 30-minute drive away for any additional needs.
+▪ Nearby towns are Blanca and Alamosa, CO.
 
-While the land is relatively flat upon arrival, we recommend a 4-wheel drive vehicle (with decent shocks and tires) in case of unexpected weather or bumpy roads.
-
-If you have any issues finding the location, please contact us with your name and receipt details for further directions.`
+▪ We recommend 4-wheel drive vehicles to ensure safety with surprise weather. `
     }
   ];
 
@@ -61,7 +59,7 @@ If you have any issues finding the location, please contact us with your name an
           {/* Spacer to add some breathing room */}
           <div className="h-16"></div>
           <h1 className="text-4xl font-bold text-center mb-8">
-            FAQ’s and Information about SolDance
+            Information about SolDance
           </h1>
   
           {/* FAQ Accordion */}

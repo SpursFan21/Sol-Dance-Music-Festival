@@ -48,8 +48,8 @@ const Navbar = () => {
       <Link href="/connect" className={getLinkClasses("/connect")}>
         Connect
       </Link>
-      <Link href="/faq" className={getLinkClasses("/faq")}>
-        FAQ
+      <Link href="/info" className={getLinkClasses("/info")}>
+        Info
       </Link>
       <Link href="/camping" className={getLinkClasses("/camping")}>
         Camping

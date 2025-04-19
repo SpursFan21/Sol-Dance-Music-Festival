@@ -50,16 +50,16 @@ export default function CampingPage() {
 
       {/* Bottom Half: Camping Info */}
       <div className="mx-auto p-8 text-center max-w-3xl">
-        <h2 className="text-4xl font-bold mb-4">Camping Information</h2>
+        <h2 className="text-4xl font-bold mb-4">Camping Logistics</h2>
         <div className="text-lg mb-4 space-y-4 text-left">
           <p>
-            Car camping is available. Your vehicle will be parked adjacent to your designated camping space, with a 6–7 foot buffer between vehicles and 10–20 yards of clearance perpendicular for tents, pop-ups, or other setups.
+            Car camping is only permitted with a valid car pass, including a 10’x35’ camping space for 1-2 tents.
           </p>
           <p>
-            Quiet hours will be observed from 4:00 AM to 9:00 AM. We kindly ask all campers to respect their neighbors by keeping noise to a minimum during this period.
+            Camping quiet hours are between 4am-9am. We ask that you please respect your camping neighbors and keep noise to a minimum during this time frame.
           </p>
           <p>
-            Portable toilets will be provided on-site, and medical and security staff will be available at all times for your safety.
+            We will have portapotties, medics, and security available.
           </p>
           <p>
             Food and recreational beverages will be available for purchase during the event.
@@ -68,10 +68,7 @@ export default function CampingPage() {
             <strong>Important:</strong> To ensure fire safety and minimize risk, large grills, hot plates, and glass containers are not permitted in the camping areas. Single burners and camp stoves are acceptable.
           </p>
           <p>
-            Re-entry is permitted if needed; however, proof of purchase will be required at the point of entry.
-          </p>
-          <p>
-            Please note: Shower facilities are not available this year. We plan to include them in future festivals as we continue to develop the site.
+            Re-entry is not-permitted.
           </p>
         </div>
       </div>
@@ -80,23 +77,22 @@ export default function CampingPage() {
       <div className="mx-auto p-8 text-center max-w-3xl">
         <h2 className="text-4xl font-bold mb-4">San Luis Camping List</h2>
         <ul className="list-disc list-inside text-lg text-left space-y-2">
-          <li>Toiletries and Baby Wipes</li>
-          <li>Tent or Car for sleeping quarters</li>
+          <li>Water</li>
+          <li>Food</li>
           <li>
-            Waterproofing bags and tarps for vending/personal items (lesson learned from last year)
+            Toiletries and Baby Wipes
           </li>
           <li>
-            Water (We will have water available, but please bring extra for yourself and friends!)
+            Tent with screw stakes for high winds or Car for sleeping quarters
           </li>
-          <li>Food (snacks and extra sustenance)</li>
-          <li>Wind Breaker (it gets windy)</li>
-          <li>Bug repellant (AN ABSOLUTE NECESSITY)</li>
+          <li>Sun Shades</li>
+          <li>Tarps</li>
+          <li>Bug repellant</li>
           <li>Sunscreen</li>
-          <li>Good Vibes</li>
+          <li>Wind Breaker</li>
           <li>
-            Responsible Mindset (reckless behavior can lead to issues; we’re celebrating freedom responsibly)
+            Good Vibes / Responsible Mindset
           </li>
-          <li>Even though there will be portapotties, please bring your own toilet paper.</li>
         </ul>
       </div>
 

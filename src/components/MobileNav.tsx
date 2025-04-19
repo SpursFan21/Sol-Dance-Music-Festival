@@ -72,7 +72,7 @@ const MobileNav = () => {
           <Link
             href="/about"
             onClick={handleLinkClick}
-            className="w-full text-center py-2 rounded-md transition-colors hover:text-secondary"
+            className="w-full text-center font-semibold py-2 rounded-md transition-colors hover:text-secondary"
           >
             About
           </Link>

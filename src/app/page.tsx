@@ -256,6 +256,7 @@ export default function Home() {
             </div>
 
             {/* Photo Gallery */}
+            {/* Photo Gallery */}
             <div className="mt-16">
               <div className="relative">
                 <div className="flex overflow-x-auto gap-4 py-4">
@@ -269,15 +270,16 @@ export default function Home() {
                         <Image
                           src={src}
                           alt={`Gallery Image ${index + 1}`}
-                          layout="responsive"
                           width={300}
                           height={200}
-                          objectFit="cover"
+                          style={{ objectFit: 'cover' }}
                           className="w-full h-full"
                         />
                       </div>
                     ))}
                 </div>
+
+
                 {/* Scroll buttons */}
                 <button
                   className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full"
