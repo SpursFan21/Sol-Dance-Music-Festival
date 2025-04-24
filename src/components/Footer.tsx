@@ -49,8 +49,8 @@ export default function Footer() {
             <Link href="/connect" className="hover:underline">
               Connect
             </Link>
-            <Link href="/faq" className="hover:underline">
-              FAQ
+            <Link href="/info" className="hover:underline">
+              Info
             </Link>
             <Link href="/camping" className="hover:underline">
               Camping

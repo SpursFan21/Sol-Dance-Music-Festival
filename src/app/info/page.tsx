@@ -8,38 +8,108 @@ import { motion } from "framer-motion";
 export default function InfoPage() {
   const faqs = [
     {
-      question: "What are we improving and changing for 2025?",
-      answer: `2024 had a rocky start with delays in sound systems, setup issues, vehicles getting stuck, and the land turning into a mud field. Despite these challenges, the community and the wonderful people who came together made it an unforgettable event.
-
-2024 was our inaugural festival year, and we had much to learn. We deeply appreciate everyone for their patience and understanding.
-
-In 2025, we will be improving security, overall layout, the vendor village, the ticketing and waiver process, sound systems/stages, schedules, workshops, and much more.
-
-We’re looking forward to 2025 and can’t wait to show you the improvements and exciting plans for next year.`,
-    },
-    {
-      question: "What happened to the old name and website, Psychedelic Sundance?",
-      answer: `Originally, a member of the festival wanted to honor the Sundance tradition in a modern way. Due to differences, we couldn’t continue with that project. With multiple concerns raised by surrounding communities and online groups, we decided to change the name as soon as possible. 
-
-We felt that none of the organizers had the sufficient heritage, credibility, or knowledge to continue with the name Psychedelic Sundance—thus, the change to Sol Dance. We apologize if our previous name conveyed any unintended cultural appropriation. We encourage attendees to research resources on the Sundance Tradition and educational materials about the San Luis Valley. 
-
-Sol Dance is derived from soul, sun, solstice, and dancing. We are confident in our new direction and hope you embrace it with us.`,
-    },
-    {
-      question: "Opening and Closing Ceremonies - Blessing the Land: Why San Luis Valley?",
-      answer: `The land where SolDance is held is sacred. We honor all cultures and communities, especially in the San Luis Valley, which has been recognized by more than five tribes as “The Valley of No Fighting.”
-
-Our opening and closing ceremonies are designed to reflect this spiritual connection. The valley offers expansive 100-mile views, sand dunes, and soaring peaks, all rich in history and folklore from Native American, Hispanic, and European settlers.
-
-Many come here to meditate and reconnect with nature—a break from the busy urban environment. We believe that experiencing the natural beauty of Blanca Peak and the breathtaking sunrises is something that must be witnessed in person.`,
-    },
-    {
-      question: "How do I get to the Event?",
+      question: "Getting to the Event",
       answer: `▪ Once you purchase a ticket, you will receive direct coordinates of the location closer to the event date. 
 
 ▪ Nearby towns are Blanca and Alamosa, CO.
 
 ▪ We recommend 4-wheel drive vehicles to ensure safety with surprise weather. `,
+    },
+    {
+      question: "Car type",
+      answer: `Car size does matter! We recommend an all-wheel or four-wheel drive car. The roads are
+mainly dirt getting from the main road to the festival grounds. Though a small car might do,
+it is important to be prepared when driving in the desert or mountains by understanding
+your vehicle and its capabilities.`,
+    },
+    {
+      question: "Bathrooms",
+      answer: `Bathrooms will be located, in both Campgrounds and inside Festival grounds.
+Open bathroom use will not be permitted. No defecating or urinating on the land to respect
+the property owners and their land and most importantly the guests around you.`,
+    },
+    {
+      question: "Safety",
+      answer: `- Jam Care
+Jam Care will be available for medical needs and emergencies on site, on Friday and
+Saturday of the festival. They will be hosting a safe/healthy place for any first aid needs. For
+any life-threatening emergencies, the local medical center will be alerted and called upon.
+There is a distance to the festival from the medical center, so response time may vary.
+- How to get help
+If you, a friend, or someone you see are seeking help please direct them to someone
+wearing a SolDance Staff shirt, Security, Jam Care tent, or anyone working or operating a
+vending/staff booth. It is important to speak up for any concern and it is noted to all that
+are involved in the festival that “IF you see something, Say something”.
+- What will staff be wearing
+Staff will be wearing a Staff Shirt, the color of the shirts will be blue with a SolDance Staff
+logo on the back and front.
+- Where to find water
+The festival will be supplying plastic water bottles. Although they will be only available on
+request from a staff booth to limit waste and to be responsible for resources. To limit
+waste and to be prepared, we recommend you bring your own water as it is the desert and
+can get very hot during the day.`,
+    },
+    {
+      question: "Weather",
+      answer: `- Wind
+The wind in the San Luis Valley can be unforgiving at times, although this won't stop us
+from having a magical experience. The great Colorado sand dunes were created by these
+forceful winds. It is important to bring face coverings, eye coverings, and coverings for
+anything you don't want exposed to sand.
+Tie downs, screw stakes, sandbags, or water buckets are a great way to ensure that your
+camping equipment does not blow away or get destroyed and is tired down to the ground.
+Please see your local camping store for related supplies!
+- Rain
+Rain can happen. It is very important to be prepared for the elements. IT CAN GET VERY
+MUDDY! So, we recommend bringing boots, extra socks, and a rain jacket.
+- Lightning
+If lightning hits anywhere within a mile radius of the festival, the festival must stop all
+production, and all scheduled programming will be delayed until further notice and it is
+safe to do so.`,
+    },
+    {
+      question: "Stages",
+      answer: `- Mainstage
+We are excited to share with you our mainstage. Sound provided by KOJA sound and their
+
+paraflex system.
+4 - Danley SH46 Tops
+
+4 - Kicks - HOQS C-2D 15" Kickbins (Mullins Mod)
+8 - Subs - HOQS ELF 21" subwoofers (28hz tuned Paraflex C-2E.3)
+
+- Temple Flora Stage
+
+Our second stage, named the Temple Flora Stage, will be powered by AKA productions and
+their turbo sound system.
+
+X6 TurboSound TMS - 4
+X8 TurboSound TSW - 124
+X2 TurboSound IQ15
+X2 TurboSound IQ18b`,
+    },
+    {
+      question: "Accessibility",
+      answer: `- ADA camping
+We will be providing ADA camping. The spots are limited and only given upon request.
+Proof of access pass must be provided and shown at time of arrival.
+- Entrances
+There will be two accessible entrances to the festival site and property, one will be access
+to the campground area. The other will be access to the daytime parking. Both have their
+own designated entrances to the actual festival grounds.
+- Passes
+There are only two different types of festival passes, Day time pass with access to the
+festival only during festival hours (Camping not included) , and a general 3 – Day GA pass
+with camping included.
+A CAR PASS IS REQUIRED TO HAVE A CAR CAMPING SPOT. 1 standard sized car, SUV, or
+truck. No trailers of any type, and no box trucks allowed. 10’x35’ camping space for 1-2
+tents.`,
+    },
+    {
+      question: "Wi-Fi for guests.",
+      answer: `We will be providing solar power and high-speed Wi-Fi for all guests and staff. There will be
+a charge to have full access to all sites and apps. It is important to note that each person in
+your group will have to pay a separate charge for their own Wi-Fi.`,
     },
   ];
 
