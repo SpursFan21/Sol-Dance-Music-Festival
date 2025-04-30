@@ -2,7 +2,7 @@
 // components/ArtitSidebar/ArtistSidebarMobile.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { artists } from "@/data/artists";
@@ -12,7 +12,7 @@ import type { ArtistSidebarProps } from "./types";
 export default function ArtistSidebarMobile({
   onSelect,
   setIsCollapsed,
-  initiallyExpanded = true,
+  initiallyExpanded = false,
 }: ArtistSidebarProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [isCollapsed, setLocalCollapsed] = useState(false);
@@ -22,10 +22,21 @@ export default function ArtistSidebarMobile({
     Sunday: initiallyExpanded,
   });
 
+  useEffect(() => {
+    if (!isCollapsed) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isCollapsed]);
+
   const grouped = {
-    Friday: artists.filter(a => a.day === "Friday"),
-    Saturday: artists.filter(a => a.day === "Saturday"),
-    Sunday: artists.filter(a => a.day === "Sunday"),
+    Friday: artists.filter((a) => a.day === "Friday"),
+    Saturday: artists.filter((a) => a.day === "Saturday"),
+    Sunday: artists.filter((a) => a.day === "Sunday"),
   };
 
   return (
@@ -38,7 +49,7 @@ export default function ArtistSidebarMobile({
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.3 }}
-            className="w-full p-4 bg-[#0d0d0d]/90 border-r border-white/10 h-[calc(100vh-64px)] fixed top-16 text-white z-50 space-y-10"
+            className="w-full p-4 bg-[#0d0d0d]/90 border-r border-white/10 h-[calc(100vh-64px)] fixed top-16 text-white z-50 space-y-10 overflow-y-auto"
           >
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-semibold uppercase text-yellow-400">Lineup</h2>
@@ -55,9 +66,15 @@ export default function ArtistSidebarMobile({
 
             {Object.entries(grouped).map(([day, list]) => (
               <div key={day}>
-                <div className="flex items-center gap-2 mb-2" onClick={() =>
-                  setExpandedDays(prev => ({ ...prev, [day]: !prev[day] }))
-                }>
+                <div
+                  className="flex items-center gap-2 mb-2 cursor-pointer"
+                  onClick={() =>
+                    setExpandedDays((prev) => ({
+                      ...prev,
+                      [day]: !prev[day],
+                    }))
+                  }
+                >
                   <div className="h-5 w-1 bg-yellow-400 rounded-sm" />
                   <h2 className="text-sm font-semibold uppercase tracking-wider text-yellow-400">
                     {day}
@@ -88,7 +105,13 @@ export default function ArtistSidebarMobile({
                                 : "hover:bg-white/10"
                             }`}
                           >
-                            <Image src={artist.image} alt={artist.name} width={32} height={32} className="rounded-full" />
+                            <Image
+                              src={artist.image}
+                              alt={artist.name}
+                              width={32}
+                              height={32}
+                              className="rounded-full"
+                            />
                             <span>{artist.name}</span>
                           </button>
                         </li>
@@ -116,3 +139,4 @@ export default function ArtistSidebarMobile({
     </>
   );
 }
+
