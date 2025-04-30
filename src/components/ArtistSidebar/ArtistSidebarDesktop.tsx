@@ -10,7 +10,7 @@ import type { ArtistSidebarProps } from "./types";
 
 export default function ArtistSidebarDesktop({
   onSelect,
-  initiallyExpanded = true,
+  initiallyExpanded = false,
 }: ArtistSidebarProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [expandedDays, setExpandedDays] = useState<Record<string, boolean>>({
@@ -20,13 +20,13 @@ export default function ArtistSidebarDesktop({
   });
 
   const grouped = {
-    Friday: artists.filter(a => a.day === "Friday"),
-    Saturday: artists.filter(a => a.day === "Saturday"),
-    Sunday: artists.filter(a => a.day === "Sunday"),
+    Friday: artists.filter((a) => a.day === "Friday"),
+    Saturday: artists.filter((a) => a.day === "Saturday"),
+    Sunday: artists.filter((a) => a.day === "Sunday"),
   };
 
   const toggleDay = (day: string) =>
-    setExpandedDays(prev => ({ ...prev, [day]: !prev[day] }));
+    setExpandedDays((prev) => ({ ...prev, [day]: !prev[day] }));
 
   return (
     <motion.aside
@@ -35,8 +35,9 @@ export default function ArtistSidebarDesktop({
       animate={{ x: 0 }}
       exit={{ x: -100 }}
       transition={{ duration: 0.3 }}
-      className="md:w-64 p-6 bg-[#0d0d0d]/90 backdrop-blur-md border-r border-white/10 overflow-y-auto h-screen sticky top-0 text-white space-y-10 shadow-lg z-40 hidden md:block"
+      className="md:w-64 p-6 bg-[#0d0d0d]/90 backdrop-blur-md border-r border-white/10 h-screen max-h-screen overflow-y-auto sticky top-0 text-white space-y-10 shadow-lg z-40 hidden md:block"
     >
+      {/* spacer */}
       <div className="my-20" />
 
       {Object.entries(grouped).map(([day, list], idx) => (
