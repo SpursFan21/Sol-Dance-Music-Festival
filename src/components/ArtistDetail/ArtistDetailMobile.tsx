@@ -29,19 +29,25 @@ export default function ArtistDetailMobile({ artist, isSidebarCollapsed }: Props
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`w-full px-4 ${mobileLeftPadding}`}
     >
-      <div className="bg-[#0d0d0d]/80 border border-[#4ceee0] shadow-xl rounded-xl p-4 text-white max-w-[90vw] mx-auto space-y-6 text-center">
-        <div className="relative w-40 h-40 mx-auto">
-          <Image
-            src={artist.image}
-            alt={artist.name}
-            fill
-            sizes="100vw"
-            className="rounded-xl object-cover shadow-lg"
-          />
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#339a94] to-[#4ceee0] text-black text-xs font-bold px-4 py-1 rounded-full shadow-md animate-pulse">
+      <div className="bg-[#0d0d0d]/80 border border border-[#4ceee0] shadow-xl rounded-xl p-4 text-white max-w-[90vw] mx-auto space-y-6 text-center">
+        <div className="shrink-0 flex flex-col items-center gap-2">
+          {/* Circular framed image */}
+          <div className="relative w-40 h-40 rounded-full shadow-lg overflow-hidden">
+            <Image
+              src={artist.image}
+              alt={artist.name}
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+
+          {/* Badge below image */}
+          <div className="bg-gradient-to-b from-[#339a94] to-[#4ceee0] text-black text-xs font-bold px-4 py-1 rounded-full shadow-md animate-pulse">
             {`Plays ${artist.day}`}
           </div>
         </div>
+
 
         <div className="space-y-3">
           <h2 className="text-3xl font-bold">{artist.name}</h2>
