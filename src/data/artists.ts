@@ -128,5 +128,29 @@ export const artists = [
     day: "Sunday",
     soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
   },
+  {
+    id: "peyton",
+    name: "Peyton",
+    image: "/artists/lowcation.png",
+    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    day: "Sunday",
+    soundcloudEmbed: "https://soundcloud.com/lowcationmusic/lowcation-pulse-1",
+  },
+  {
+    id: "mfinity",
+    name: "Mfinity",
+    image: "/artists/mfinity.png",
+    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    day: "Sunday",
+    soundcloudEmbed: "https://soundcloud.com/mfinityofficial/sets/rewind-w-saturna",
+  },
+  {
+    id: "astrodot",
+    name: "Astrodot",
+    image: "/artists/astrodot.png",
+    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    day: "Sunday",
+    soundcloudEmbed: "https://soundcloud.com/astrodotmusic/the-hand",
+  },
   // add more here
 ];
