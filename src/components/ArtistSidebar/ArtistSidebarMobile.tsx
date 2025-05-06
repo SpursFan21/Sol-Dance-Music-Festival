@@ -33,10 +33,17 @@ export default function ArtistSidebarMobile({
     };
   }, [isCollapsed]);
 
-  const grouped = {
+  const groupedByDay = {
     Friday: artists.filter((a) => a.day === "Friday"),
     Saturday: artists.filter((a) => a.day === "Saturday"),
     Sunday: artists.filter((a) => a.day === "Sunday"),
+  };
+
+  const groupByStage = (artistList: typeof artists) => {
+    return {
+      Summit: artistList.filter((a) => a.stage === "Summit"),
+      Temple: artistList.filter((a) => a.stage === "Temple"),
+    };
   };
 
   return (
@@ -64,63 +71,76 @@ export default function ArtistSidebarMobile({
               </button>
             </div>
 
-            {Object.entries(grouped).map(([day, list]) => (
-              <div key={day}>
-                <div
-                  className="flex items-center gap-2 mb-2 cursor-pointer"
-                  onClick={() =>
-                    setExpandedDays((prev) => ({
-                      ...prev,
-                      [day]: !prev[day],
-                    }))
-                  }
-                >
-                  <div className="h-5 w-1 bg-yellow-400 rounded-sm" />
-                  <h2 className="text-sm font-semibold uppercase tracking-wider text-yellow-400">
-                    {day}
-                  </h2>
-                  <span className="ml-auto text-yellow-400 text-xs">
-                    {expandedDays[day] ? "-" : "+"}
-                  </span>
-                </div>
+            {Object.entries(groupedByDay).map(([day, list]) => {
+              const stages = groupByStage(list);
 
-                <AnimatePresence>
-                  {expandedDays[day] && (
-                    <motion.ul
-                      initial={{ height: 0 }}
-                      animate={{ height: "auto" }}
-                      exit={{ height: 0 }}
-                      className="overflow-hidden space-y-1"
-                    >
-                      {list.map((artist) => (
-                        <li key={artist.id}>
-                          <button
-                            onClick={() => {
-                              onSelect(artist);
-                              setActiveId(artist.id);
-                            }}
-                            className={`w-full flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium ${
-                              activeId === artist.id
-                                ? "bg-yellow-500 text-black"
-                                : "hover:bg-white/10"
-                            }`}
-                          >
-                            <Image
-                              src={artist.image}
-                              alt={artist.name}
-                              width={32}
-                              height={32}
-                              className="rounded-full"
-                            />
-                            <span>{artist.name}</span>
-                          </button>
-                        </li>
-                      ))}
-                    </motion.ul>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
+              return (
+                <div key={day}>
+                  <div
+                    className="flex items-center gap-2 mb-2 cursor-pointer"
+                    onClick={() =>
+                      setExpandedDays((prev) => ({
+                        ...prev,
+                        [day]: !prev[day],
+                      }))
+                    }
+                  >
+                    <div className="h-5 w-1 bg-yellow-400 rounded-sm" />
+                    <h2 className="text-sm font-semibold uppercase tracking-wider text-yellow-400">
+                      {day}
+                    </h2>
+                    <span className="ml-auto text-yellow-400 text-xs">
+                      {expandedDays[day] ? "-" : "+"}
+                    </span>
+                  </div>
+
+                  <AnimatePresence>
+                    {expandedDays[day] && (
+                      <motion.div
+                        initial={{ height: 0 }}
+                        animate={{ height: "auto" }}
+                        exit={{ height: 0 }}
+                        className="overflow-hidden space-y-4"
+                      >
+                        {["Summit", "Temple"].map((stage) => (
+                          <div key={stage}>
+                            <div className="text-xs uppercase font-bold text-yellow-300 mb-1 px-1">
+                              {stage} Stage
+                            </div>
+                            <ul className="space-y-1">
+                              {stages[stage as "Summit" | "Temple"].map((artist) => (
+                                <li key={artist.id}>
+                                  <button
+                                    onClick={() => {
+                                      onSelect(artist);
+                                      setActiveId(artist.id);
+                                    }}
+                                    className={`w-full flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium ${
+                                      activeId === artist.id
+                                        ? "bg-yellow-500 text-black"
+                                        : "hover:bg-white/10"
+                                    }`}
+                                  >
+                                    <Image
+                                      src={artist.image}
+                                      alt={artist.name}
+                                      width={32}
+                                      height={32}
+                                      className="rounded-full"
+                                    />
+                                    <span>{artist.name}</span>
+                                  </button>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
           </motion.aside>
         )}
       </AnimatePresence>
@@ -139,4 +159,5 @@ export default function ArtistSidebarMobile({
     </>
   );
 }
+
 
