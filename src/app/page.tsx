@@ -32,17 +32,14 @@ export default function Home() {
   // Photo gallery data
   const galleryImages = [
     "/g1.jpg",
-    "/g2.jpg",
     "/g3.jpg",
     "/g4.jpg",
     "/g5.jpg",
     "/g6.jpg",
     "/g7.jpg",
     "/g8.jpg",
-    "/g9.jpg",
     "/g10.jpg",
     "/g11.jpg",
-    "/g12.jpg",
   ];
 
   // Use custom hook to get the current window width
