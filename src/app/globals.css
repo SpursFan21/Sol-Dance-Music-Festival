@@ -52,3 +52,24 @@ body {
   background: url('/banner.png') no-repeat center center fixed;
   background-size: cover;
 }
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #4ceee0 #1f1f1f;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #1f1f1f;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #4ceee0;
+    border-radius: 4px;
+    border: 2px solid #1f1f1f;
+  }
+}

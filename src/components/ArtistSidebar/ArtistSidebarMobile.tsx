@@ -22,12 +22,16 @@ export default function ArtistSidebarMobile({
     Sunday: initiallyExpanded,
   });
 
+  const [expandedStages, setExpandedStages] = useState<
+    Record<string, Record<string, boolean>>
+  >({
+    Friday: { Summit: false, Temple: false },
+    Saturday: { Summit: false, Temple: false },
+    Sunday: { Summit: false, Temple: false },
+  });
+
   useEffect(() => {
-    if (!isCollapsed) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isCollapsed ? "" : "hidden";
     return () => {
       document.body.style.overflow = "";
     };
@@ -37,13 +41,6 @@ export default function ArtistSidebarMobile({
     Friday: artists.filter((a) => a.day === "Friday"),
     Saturday: artists.filter((a) => a.day === "Saturday"),
     Sunday: artists.filter((a) => a.day === "Sunday"),
-  };
-
-  const groupByStage = (artistList: typeof artists) => {
-    return {
-      Summit: artistList.filter((a) => a.stage === "Summit"),
-      Temple: artistList.filter((a) => a.stage === "Temple"),
-    };
   };
 
   return (
@@ -59,7 +56,9 @@ export default function ArtistSidebarMobile({
             className="w-full p-4 bg-[#0d0d0d]/90 border-r border-white/10 h-[calc(100vh-64px)] fixed top-16 text-white z-50 space-y-10 overflow-y-auto"
           >
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold uppercase text-yellow-400">Lineup</h2>
+              <h2 className="text-lg font-semibold uppercase text-yellow-400">
+                Lineup
+              </h2>
               <button
                 onClick={() => {
                   setLocalCollapsed(true);
@@ -72,10 +71,12 @@ export default function ArtistSidebarMobile({
             </div>
 
             {Object.entries(groupedByDay).map(([day, list]) => {
-              const stages = groupByStage(list);
+              const isDayExpanded = expandedDays[day];
+              const isStageExpanded = expandedStages[day];
 
               return (
                 <div key={day}>
+                  {/* Day toggle */}
                   <div
                     className="flex items-center gap-2 mb-2 cursor-pointer"
                     onClick={() =>
@@ -90,51 +91,84 @@ export default function ArtistSidebarMobile({
                       {day}
                     </h2>
                     <span className="ml-auto text-yellow-400 text-xs">
-                      {expandedDays[day] ? "-" : "+"}
+                      {isDayExpanded ? "−" : "+"}
                     </span>
                   </div>
 
                   <AnimatePresence>
-                    {expandedDays[day] && (
+                    {isDayExpanded && (
                       <motion.div
                         initial={{ height: 0 }}
                         animate={{ height: "auto" }}
                         exit={{ height: 0 }}
                         className="overflow-hidden space-y-4"
                       >
-                        {["Summit", "Temple"].map((stage) => (
-                          <div key={stage}>
-                            <div className="text-xs uppercase font-bold text-yellow-300 mb-1 px-1">
-                              {stage} Stage
-                            </div>
-                            <ul className="space-y-1">
-                              {stages[stage as "Summit" | "Temple"].map((artist) => (
-                                <li key={artist.id}>
-                                  <button
-                                    onClick={() => {
-                                      onSelect(artist);
-                                      setActiveId(artist.id);
-                                    }}
-                                    className={`w-full flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium ${
-                                      activeId === artist.id
-                                        ? "bg-yellow-500 text-black"
-                                        : "hover:bg-white/10"
-                                    }`}
+                        {["Summit", "Temple"].map((stage) => {
+                          const stageExpanded = isStageExpanded?.[stage];
+                          const artistsInStage = list
+                            .filter((a) => a.stage === stage)
+                            .sort((a, b) => a.id.localeCompare(b.id));
+
+                          return (
+                            <div key={stage}>
+                              {/* Stage toggle */}
+                              <div
+                                className="flex items-center cursor-pointer mb-1 px-1 text-xs uppercase font-bold text-yellow-300"
+                                onClick={() =>
+                                  setExpandedStages((prev) => ({
+                                    ...prev,
+                                    [day]: {
+                                      ...prev[day],
+                                      [stage]: !prev[day][stage],
+                                    },
+                                  }))
+                                }
+                              >
+                                <span>{stage} Stage</span>
+                                <span className="ml-auto text-yellow-300 text-xs">
+                                  {stageExpanded ? "−" : "+"}
+                                </span>
+                              </div>
+
+                              <AnimatePresence>
+                                {stageExpanded && (
+                                  <motion.ul
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="space-y-1 overflow-hidden"
                                   >
-                                    <Image
-                                      src={artist.image}
-                                      alt={artist.name}
-                                      width={32}
-                                      height={32}
-                                      className="rounded-full"
-                                    />
-                                    <span>{artist.name}</span>
-                                  </button>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
+                                    {artistsInStage.map((artist) => (
+                                      <li key={artist.id}>
+                                        <button
+                                          onClick={() => {
+                                            onSelect(artist);
+                                            setActiveId(artist.id);
+                                          }}
+                                          className={`w-full flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium ${
+                                            activeId === artist.id
+                                              ? "bg-yellow-500 text-black"
+                                              : "hover:bg-white/10"
+                                          }`}
+                                        >
+                                          <Image
+                                            src={artist.image}
+                                            alt={artist.name}
+                                            width={32}
+                                            height={32}
+                                            className="rounded-full"
+                                          />
+                                          <span>{artist.name}</span>
+                                        </button>
+                                      </li>
+                                    ))}
+                                  </motion.ul>
+                                )}
+                              </AnimatePresence>
+                            </div>
+                          );
+                        })}
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -159,5 +193,3 @@ export default function ArtistSidebarMobile({
     </>
   );
 }
-
-
