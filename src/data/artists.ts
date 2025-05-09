@@ -112,7 +112,7 @@ export const artists = [
   {
     id: "koba",
     name: "Koba",
-    image: "/artists/cheifkaya.png",
+    image: "/artists/koba.jpg",
     bio: "",
     soundcloudEmbed: "https://soundcloud.com/kayadubz/chief-kaya-life-or-death-ldh",
     day: "Friday",
@@ -139,7 +139,7 @@ export const artists = [
   {
     id: "siriian",
     name: "SIRIIAN",
-    image: "/artists/cheifkaya.png",
+    image: "/artists/siriian.png",
     bio: "",
     soundcloudEmbed: "https://soundcloud.com/kayadubz/chief-kaya-life-or-death-ldh",
     day: "Friday",

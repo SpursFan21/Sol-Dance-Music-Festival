@@ -140,13 +140,16 @@ export default function ArtistSidebarDesktop({
                                             : "hover:bg-white/10 hover:text-primary"
                                         }`}
                                       >
-                                        <Image
-                                          src={artist.image}
-                                          alt={artist.name}
-                                          width={32}
-                                          height={32}
-                                          className="rounded-full object-cover"
-                                        />
+                                        <div className="w-8 h-8 rounded-full overflow-hidden">
+                                          <Image
+                                            src={artist.image}
+                                            alt={artist.name}
+                                            width={32}
+                                            height={32}
+                                            className="object-cover"
+                                          />
+                                        </div>
+
                                         <span>{artist.name}</span>
                                       </button>
                                     </li>
