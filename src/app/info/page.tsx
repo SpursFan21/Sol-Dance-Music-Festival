@@ -111,6 +111,10 @@ tents.`,
 a charge to have full access to all sites and apps. It is important to note that each person in
 your group will have to pay a separate charge for their own Wi-Fi.`,
     },
+    {
+      question: "Preformers and Live Painters",
+      answer: `Beyond the music, Sol Dance will feature live painters and performers adding bursts of creativity and movement to the festival atmosphere.`,
+    },
   ];
 
   const [openFAQs, setOpenFAQs] = useState<boolean[]>(faqs.map(() => false));
