@@ -166,6 +166,10 @@ export const artists = [
     day: "Friday",
     stage: "Temple",
   },
+
+
+
+
 //summit stage saturday
   {
     id: "acyan",
@@ -257,88 +261,95 @@ export const artists = [
     stage: "Summit",
     soundcloudEmbed: "https://soundcloud.com/wesleyxmack/puglife?in=wesleyxmack/sets/pug-life-ep",
   },
+
+
+
+
   //temple stage satrurday
   {
     id: "strongyawn",
     name: "Strong yawn",
-    image: "/artists/chmura.png",
-    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    image: "/artists/strongyawn.png",
+    bio: "",
     day: "Saturday",
     stage: "Temple",
-    soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
+    soundcloudEmbed: "https://soundcloud.com/strong-yawn/strong-yawn-bussin-jug",
   },
   {
     id: "inertia",
     name: "Inertia",
-    image: "/artists/chmura.png",
-    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    image: "/artists/inertia.png",
+    bio: "",
     day: "Saturday",
     stage: "Temple",
-    soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
+    soundcloudEmbed: "https://soundcloud.com/inertia-399733421/inertia-x-sapling-the-only-way",
   },
   {
     id: "sapling",
     name: "Sapling",
-    image: "/artists/chmura.png",
-    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    image: "/artists/sappling.jpg",
+    bio: "",
     day: "Saturday",
     stage: "Temple",
-    soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
+    soundcloudEmbed: "https://soundcloud.com/sapling_beats/sets/i-love-you",
   },
   {
     id: "miklo",
     name: "Miklo",
-    image: "/artists/chmura.png",
-    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    image: "/artists/miklo.png",
+    bio: "",
     day: "Saturday",
     stage: "Temple",
-    soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
+    soundcloudEmbed: "https://soundcloud.com/miklodubz/death-waits",
   },
   {
     id: "journey",
     name: "Journey",
-    image: "/artists/chmura.png",
-    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    image: "/artists/journey.png",
+    bio: "",
     day: "Saturday",
     stage: "Temple",
-    soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
+    soundcloudEmbed: "https://soundcloud.com/journey_dubz/habstrakt-remixxxx",
   },
   {
     id: "dotson",
     name: "Dotson",
-    image: "/artists/chmura.png",
-    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    image: "/artists/dotson.png",
+    bio: "",
     day: "Saturday",
     stage: "Temple",
-    soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
+    soundcloudEmbed: "https://soundcloud.com/dot_son_music/below-dotson-remix1",
   },
   {
     id: "zipz",
     name: "Zipz",
-    image: "/artists/chmura.png",
-    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    image: "/artists/zipz.jpg",
+    bio: "",
     day: "Saturday",
     stage: "Temple",
-    soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
+    soundcloudEmbed: "https://soundcloud.com/gailon-hill-861996435/popular",
   },
   {
     id: "ghostrook",
     name: "Ghost Rook",
-    image: "/artists/chmura.png",
-    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    image: "/artists/ghostrook.png",
+    bio: "",
     day: "Saturday",
     stage: "Temple",
-    soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
+    soundcloudEmbed: "https://soundcloud.com/middleearthentertainment/ghost-rook-nail-the-windows-shut?in=ghost_rook/sets/nail-the-windows-shut",
   },
   {
     id: "geezydubsb2bshlop",
     name: "Geezy Dubs b2b SHLOP",
-    image: "/artists/chmura.png",
-    bio: "Bass wizard of the dead. Dark, deep, and deadly.",
+    image: "/artists/geezy.png",
+    bio: "",
     day: "Saturday",
     stage: "Temple",
-    soundcloudEmbed: "https://soundcloud.com/chmuramusic/sets/switch-it-w-atyya",
+    soundcloudEmbed: "https://soundcloud.com/geezydubz/geezydubz-x-ghost-rook-mad-times-grey-master-run-2",
   },
+
+
+
 
   //summmit stage sunday
   {
