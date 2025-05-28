@@ -42,8 +42,8 @@ const Navbar = () => {
         Tickets
       </a>
 
-      <Link href="/about" className={getLinkClasses("/about")}>
-        About
+      <Link href="/workshops" className={getLinkClasses("/workshops")}>
+        Worksops
       </Link>
       <Link href="/connect" className={getLinkClasses("/connect")}>
         Connect

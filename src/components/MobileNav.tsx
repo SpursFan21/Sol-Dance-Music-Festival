@@ -70,11 +70,11 @@ const MobileNav = () => {
             Tickets
           </a>
           <Link
-            href="/about"
+            href="/workshops"
             onClick={handleLinkClick}
             className="w-full text-center font-semibold py-2 rounded-md transition-colors hover:text-secondary"
           >
-            About
+            Workshops
           </Link>
           <Link
             href="/connect"
