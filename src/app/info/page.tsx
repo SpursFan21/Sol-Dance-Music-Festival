@@ -69,7 +69,7 @@ safe to do so.`,
     },
     {
       question: "Stages",
-      answer: `- Mainstage
+      answer: `- Summit Stage
 We are excited to share with you our mainstage. Sound provided by KOJA sound and their
 
 paraflex system.
@@ -112,7 +112,7 @@ a charge to have full access to all sites and apps. It is important to note that
 your group will have to pay a separate charge for their own Wi-Fi.`,
     },
     {
-      question: "Preformers and Live Painters",
+      question: "Performers and Live Painters",
       answer: `Beyond the music, Sol Dance will feature live painters and performers adding bursts of creativity and movement to the festival atmosphere.`,
     },
   ];
