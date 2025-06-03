@@ -106,10 +106,18 @@ truck. No trailers of any type, and no box trucks allowed. 10’x35’ camping s
 tents.`,
     },
     {
-      question: "Wi-Fi for guests.",
-      answer: `We will be providing solar power and high-speed Wi-Fi for all guests and staff. There will be
-a charge to have full access to all sites and apps. It is important to note that each person in
-your group will have to pay a separate charge for their own Wi-Fi.`,
+      question: "The WiFi Lounge — Powered by Starlink",
+      answer: `Need a break from the beats? Step into the WiFi Lounge, your digital oasis in the heart of the festival. Enjoy lightning-fast internet powered by Starlink, giving you seamless access no matter how far off the grid we are.
+
+ What’s Included:
+
+1 Hour of High-Speed WiFi Access – Stream, upload, share, or FaceTime your friends without a hitch.
+
+Comfortable Lounge Area – Sit back, relax, and scroll in style.
+
+Full-Service Digital Hub – Whether you need to check emails, connect with friends, or post that perfect moment, we’ve got you covered.
+
+Stay connected, recharge (literally), and keep your festival experience going strong — both on and offline.`,
     },
     {
       question: "Performers and Live Painters",

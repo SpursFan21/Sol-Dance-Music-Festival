@@ -210,7 +210,7 @@ export const artists = [
   {
     id: "deadnasty",
     name: "DeadNasty",
-    image: "/artists/bio-place-holder.png",
+    image: "/artists/deadnasty.jpg",
     bio: "",
     soundcloudEmbed: "https://soundcloud.com/deadnasty/book-of-dead-chronicle-iv",
     day: "Saturday",
