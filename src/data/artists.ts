@@ -97,7 +97,7 @@ export const artists = [
   {
     id: "orbweaver",
     name: "Orbweaver",
-    image: "/artists/orbweaver.png",
+    image: "/artists/orbweaver.PNG",
     bio: "",
     soundcloudEmbed: "https://soundcloud.com/orbweaverdub/spidey-sense",
     day: "Friday",
@@ -269,7 +269,7 @@ export const artists = [
   {
     id: "strongyawn",
     name: "Strong yawn",
-    image: "/artists/strongyawn.png",
+    image: "/artists/strongyawn.PNG",
     bio: "",
     day: "Saturday",
     stage: "Temple",
@@ -278,7 +278,7 @@ export const artists = [
   {
     id: "inertia",
     name: "Inertia",
-    image: "/artists/inertia.png",
+    image: "/artists/inertia.PNG",
     bio: "",
     day: "Saturday",
     stage: "Temple",
@@ -409,7 +409,7 @@ export const artists = [
   {
     id: "peyton",
     name: "Peyton",
-    image: "/artists/lowcation.png",
+    image: "/artists/peyton.jpg",
     bio: "",
     day: "Sunday",
     stage: "Summit",
@@ -487,7 +487,7 @@ export const artists = [
   {
     id: "absnt",
     name: "Absnt",
-    image: "/artists/absnt.png",
+    image: "/artists/absnt.PNG",
     bio: "",
     day: "Sunday",
     stage: "Temple",
@@ -496,7 +496,7 @@ export const artists = [
   {
     id: "furtha",
     name: "Furtha",
-    image: "/artists/furtha.png",
+    image: "/artists/furtha.PMG",
     bio: "",
     day: "Sunday",
     stage: "Temple",
