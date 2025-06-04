@@ -14,7 +14,7 @@ export default function LineupPage() {
         <div className="mt-8 p-4 flex justify-center">
             <div className="relative w-full max-w-6xl aspect-[3/4] rounded-lg overflow-hidden">
             <Image
-              src="/phase2.png"
+              src="/phase3.png"
               alt="Festival Lineup Flyer"
               fill
               className="object-contain"
