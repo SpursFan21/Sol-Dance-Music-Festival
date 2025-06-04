@@ -413,7 +413,7 @@ export const artists = [
     bio: "",
     day: "Sunday",
     stage: "Summit",
-    soundcloudEmbed: "https://soundcloud.com/lowcationmusic/lowcation-pulse-1",
+    soundcloudEmbed: "https://soundcloud.com/jackson-peyton29/chumy",
   },
   {
     id: "mfinity",
@@ -496,7 +496,7 @@ export const artists = [
   {
     id: "furtha",
     name: "Furtha",
-    image: "/artists/furtha.PMG",
+    image: "/artists/furtha.PNG",
     bio: "",
     day: "Sunday",
     stage: "Temple",
